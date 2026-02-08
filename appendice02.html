@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+
+<html lang="it">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="Keywords" content="didattica, fisica, astronomia, matematica" />
+  <!--  -->
+  <link rel="stylesheet" type="text/css" href="../../webNew/www.lorenzoroi.net/risorse/fogliostile.css" media="all" />
+  <!-- mathjax -->
+  <script type="text/x-mathjax-config">
+      window.MathJax = {
+        tex: {
+          tags: 'ams'
+        }
+      };
+    </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+
+  <!-- stili locali -->
+  <style>
+    body {
+      font-family: sans-serif;
+      font-size: 90%;
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 5%;
+      line-height: 1.3;
+    }
+
+    h1 {
+      font-family: sans-serif;
+      font-size: 150%;
+      font-weight: bold;
+    }
+
+    .titolo {
+      font-family: sans-serif;
+      font-size: 180%;
+      font-weight: bold;
+    }
+
+    .grassetto {
+      font-family: sans-serif;
+      font-weight: bold;
+    }
+
+    figure {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    figcaption {
+      padding: 10px;
+      text-align: center;
+    }
+
+    .img-centrata {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border: 2px solid rgb(180, 180, 180);
+    }
+
+    .img-centratabordo {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 15px;
+      border: 2px solid rgb(180, 180, 180);
+    }
+
+    div.centra {
+      text-align: center;
+    }
+
+    .nota {
+      background-color: #ffdddd;
+      border-left: 6px solid #f44336;
+      line-height: 1.3;
+      padding: 5px 10px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 100%;
+      color: blue;
+      border: 0px;
+    }
+
+    p.dettagli {
+      background-color: #e9fdff;
+      margin-left: 5%;
+      margin-right: 5%;
+      padding: 5px 10px;
+      border-left: 1px solid blue;
+      border-right: 1px solid blue;
+      border-top: 1px solid blue;
+      border-bottom: 1px solid blue;
+      padding: 20px 20px;
+    }
+
+.alCentro {
+      text-align: center;
+    }
+
+    dl {
+      padding: 10px 10px;
+      border: 1px solid blue;
+      background-color: #e9fdff;
+    }
+
+    dt {
+      font-weight: bold;
+      font-size: 12pt;
+    }
+
+    .enunciato {
+      text-align: left;
+      line-height: 1.8;
+      font-family: arial, verdana, sans-serif;
+      background-color: #ffffbb;
+      border: 1px solid #ff0000;
+      border-left: 6px solid #ff0000;
+      font-size: 100%;
+      line-height: 1.6;
+      padding: 5px;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+
+    .entroenunciato {
+      margin-top: 0px;
+    }
+
+    img.block {
+      display: block;
+    }
+
+    .ex-ref {
+      font-style: italic;
+      font-size: 100%;
+    }
+
+    table {
+      table-layout: auto;
+      width: 90%;
+      margin: 10px auto;
+      border-collapse: separate;
+      border-top: 1px solid #999999;
+      border-bottom: 1px solid #999999;
+    }
+
+    th {
+      vertical-align: center;
+      padding: 0.6em;
+      width: auto;
+      background-color: rgb(198, 242, 243);
+      /* background-color: #ffffcc; */
+    }
+
+    td {
+      vertical-align: center;
+      padding: 0.6em;
+      width: auto;
+    }
+
+    .allineaAllaDestra {
+      text-align: right;
+    }
+
+    .allineaAlCentro {
+    text-align: center;
+}
+
+tbody tr:nth-child(odd) {
+      background-color: #eeeeee;
+    }
+
+    caption {
+      padding: 1em;
+      font-style: italic;
+      caption-side: bottom;
+      letter-spacing: 1px;
+    }
+  </style>
+
+  <title>Appendice 2</title>
+</head>
+<!-- fine head -->
+
+<body>
+  <h1>Appendice 2</h1>
+
+  <h1>Analemma</h1>
+
+
+  <p>Il Sole non si muove con velocità costante nel suo moto apparente lungo l'eclittica e ciò principalmente a causa dell'orbita ellittica della Terra nonché dell'inclinazione dell'asse terrestre sul piano dell'eclittica. Per ovviare alla variabilità del giorno solare inteso come l'intervallo di tempo tra due culminazioni successive al meridiano locale si è introdotto un Sole fittizio disposto lungo l'equatore celeste il cui periodo definisce il giorno solare medio posto convenzionalmente uguale a 24 ore (v. 1.20).</p>
+
+  <p>L'equazione del tempo \(E\) (fig. <a href="#appendice02_fig01">1</a>) rappresenta quindi la correzione da apportare al tempo solare medio\(LMT\) per ottenere il tempo solare vero \(AST\), correzione riassunta dall'espressione già incontrata \eqref{eq:1.137}.</p>
+
+
+  \[
+  \bbox[border:1px solid red,15px,#ffffcc]{
+  E = AST - LMT.\tag{0}\label{eq:0}
+  }\]
+
+   <figure id="appendice02_fig01">
+    <img src="./immagini/appendice02_fig01.png" class="img-centratabordo" style="width: 45%" />
+    <figcaption>Fig. A.1. Equazione del tempo.</figcaption>
+  </figure>
+
+<p>Queste considerazioni sul tempo solare vero (o apparente) e sul tempo dei nostri orologi se da un lato possono sembrare  lontane dalla nostra esperienza quotidiana in quanto potremo considerarle come astrazioni nella geometria del moto solare, dall'altro hanno trovato una spettacolare e sensazionale conferma visiva con la foto seguente, la prima foto dell'<em>analemma solare</em> mai realizzata.</p>
+
+   <figure id="appendice02_fig02">
+    <img src="./immagini/appendice02_fig02.png" class="img-centratabordo" style="width: 45%" />
+    <figcaption>Fig. A.2. Analemma solare (<em>Dennis Di Cicco, Sky & Telescope: giugno 1979</em>).</figcaption>
+  </figure>
+
+<p>L'analemma è la curva a forma di otto che si ottiene fotografando il Sole <em>alla stessa ora locale ogni giorno per un anno intero</em> e rappresenta la traduzione spaziale dell'equazione del tempo. La forma dell'analemma è dovuta alla combinazione dell'inclinazione dell'asse terrestre rispetto al piano dell'eclittica e della variazione della velocità orbitale della Terra intorno al Sole nella sua orbita ellittica: nel seguito daremo conto di ciò e di altre sue caratteristiche ottenute in ogni caso a partire da un insieme di dati quali angolo orario \(H\), declinazione \(\delta\), altezza \(a\), azimut \(A\) del Sole ed equazione del tempo, calcolati per un intero anno. Dal punto di vista matematico, l'analemma rientra nella classe di curve a forma di otto dette lemniscate.</p>
+
+  <div id="nota1" class="nota">
+    <p><strong>Nota</strong> La foto dell'analemma solare è stata realizzata da Dennis Di Cicco e pubblicata su <em>Sky & Telescope</em> nel giugno 1979. Consiste di 45 differenti esposizioni fotografiche del Sole ottenute in giorni diversi dell'anno separati da intervalli regolari di 7 giorni. Le foto sono state scattate tutte alla stessa ora \(8\!:\!30'\,EST\) con la fotocamera rigidamente fissata ad un supporto. Per mostrare il moto diurno del Sole nei giorni prossimi ai solstizi del 26 giugno (scia più elevata) e 26 dicembre (scia inferiore), e il 30 agosto in prossimità del nodo dell'analemma, l'otturatore della fotocamera è stato aperto dal sorgere del Sole fino alle \(8\!:\!25'\), 5 minuti prima dello scatto previsto per la posizione solare. I percorsi solari ottenuti con queste tre pose evidenziano quindi la diversa lunghezza del dì in estate e in inverno. Eliminati i filtri per le foto solari, la foto dello sfondo con alberi e abitazione, è stata fatta il 24 settembre 1978 alle ore \(14\!:\!51'\) con il Sole a Sud-Ovest come appare evidente dall'ombra del camino. </p>
+  </div>
+
+
+<p>Per comprendere la sua forma nel cielo e la sua origine, supponiamo che un osservatore sia posto ad una media latitudine \(\phi = 45^\circ N\) e alla longitudine di Greenwich \( \lambda = 0^\circ \) e calcoliamo la posizione del Sole ogni giorno dell'anno alle ore 12:00 \(UTC\) che equivale, sostanzialmente, al tempo medio locale \(LMT\). Evidentemente ci servono le formule viste nella parte principale di questo lavoro per calcolare l'azimut \(A\) \eqref{eq:1.103}  e l'altezza \(a\) \eqref{eq:1.05} del Sole, formule che sappiamo essere funzione della declinazione \(\delta\) e dell'angolo orario \(H\).</p>
+  
+<p>Nella figura <a href="#appendice02_fig03">3</a> ponendo in ascissa l'azimut \(A\) e in ordinata l'altezza \(a\) rappresentiamo quindi ciò che un osservatore (molto paziente!) può rilevare sulla posizione solare nell'arco di un anno.
+
+     <figure id="appendice02_fig03">
+    <img src="./immagini/appendice02_fig03.svg" class="img-centratabordo" style="width: 25%" />
+    <figcaption>Fig. A.3. Analemma solare in coordinate altazimutali.</figcaption>
+  </figure>
+  
+  <p>La linea corrispondente all'azimut nullo indica il mezzogiorno locale e chiaramente, il Sole attraversa questa linea in soli quattro giorni dell'anno: il 15 aprile, il 14 giugno, il 1 settembre e il 25 dicembre. In tutti gli altri giorni l'ora del mezzogiorno solare vero differisce da quella del mezzogiorno locale: in particolare a valori negativi dell'azimut (preferiamo in questo contesto utilizzare questa convenzione piuttosto che gli stessi ottenuti sommando \(360^\circ\)) cioè quando il Sole si trova ancora ad Est, il Sole ritarda rispetto al Sole fittizio ossia culmina con ritardo rispetto alle \(12\,\hbox{h}\) locali. Con riferimento all'equazione del tempo \(E\), fig. <a href="#appendice02_fig06">6</a>, ciò corrisponde a valori negativi di \(E\). Il viceversa accade quando l'azimut è positivo: il Sole quindi ha già attraversato il meridiano locale cosicché alle \(12\,\hbox{h}\) si trova ad Ovest dello stesso meridiano. La figura <a href="#appendice02_fig03">3</a> riporta le date in corrispondenza delle quali si raggiungono i valori estremi nel ritardo o nell'anticipo. Osserviamo inoltre come il massimo dell'altezza sia raggiunto in corrispondenza del solstizio d'estate mentre il minimo è raggiunto nel solstizio d'inverno: tale escursione annuale in altezza è evidentemente dovuta all'inclinazione dell'asse terrestre sull'eclittica che è causa della variazione in declinazione.</p>
+
+  <p>Le proiezioni dell'analemma sulla sfera celeste e nel sistema altazimutale (fig. <a href="#appendice02_fig04">4</a>) chiariscono com'è disposta l'analemma in riferimento al meridiano locale e, appunto, l'ampiezza della sua oscillazione in altezza pari a \(2\epsilon=2\times 23.44^\circ\).</p>
+
+  <figure id="appendice02_fig04">
+    <img src="./immagini/appendice02_fig04.svg" class="img-centratabordo" style="width: 95%" />
+    <figcaption>Fig. A.4. Analemma solare e sfera celeste.</figcaption>
+  </figure>
+
+  <p>Pertanto nella successiva <a href="#appendice02_fig05">5</a> disponiamo in ordinata la declinazione in luogo dell'altezza mentre in ascissa riportiamo l'equazione del tempo \(E\) che traduce, in termini temporali, l'angolo orario \(H\) in quanto tra questi sussiste la relazione che riporta i gradi ai minuti \(E=4 H\). Esplicitiamo inoltre il verso del ciclo annuale evidenziando in colore il primo giorno dei mesi mentre non riportiamo la latitudine e la longitudine in quanto la rappresentazione dell'analemma nel piano \((t,\delta)\) è indipendente dal luogo dell'osservatore. Come vedremo nella successiva sezione, appare invece dipendere dal luogo se l'osservazione avviene nel sistema di coordinate locali altazimutali.</p>
+
+  <p>Osservando la successione dei mesi appare che il lobo di minor dimensioni ma con declinazioni più elevate viene percorso nei mesi estivi mentre accade il contrario per il lobo inferiore. Per tale motivo, il primo viene indicato come il lobo estivo e l'altro come quello invernale. 
+
+   <figure id="appendice02_fig05">
+    <img src="./immagini/appendice02_fig05.svg" class="img-centratabordo" style="width: 30%" />
+    <figcaption>Fig. A.5. Analemma con la declinazione solare in funzione del tempo.</figcaption>
+  </figure>
+
+  <h1>Asimmetria dell'analemma</h1>
+
+  <p>Un aspetto dell'analemma è la sua asimmetria rispetto all'asse verticale, asse che rappresenta il mezzogiorno locale. Per comprenderne, almeno a livello intuitivo, l'origine, consideriamo separatamente i contributi all'equazione del tempo \(E\) dovuti all'inclinazione dell'asse terrestre e alla eccentricità dell'orbita intorno al Sole.</p>
+
+  <p>Ripresa la \eqref{eq:1.140}, ciascun contributo all'equazione del tempo  \(E\) è evidenziato in \eqref{eq:1} entro parentesi quadre: il primo è collegato all'obliquità e dipende dall'anomalia media \(M\) e dalla longitudine media \(l\) nonché dall'obliquità \(\epsilon\) mentre il secondo dalla sola anomalia media e dall'eccentricità.</p>  
+
+
+      \[ \eqalign{E &= \left[\tan^2{\epsilon\over 2} \sin(2l) + 4e \tan^2{\epsilon\over 2} \sin M \cos(2l) - {1\over 2}\tan^4{\epsilon\over 2} \sin(4l)\right] +\left[-2e\sin M - {5\over 4} e^2 \sin(2M)\right]\qquad(\hbox{rad})\cr &= E(\hbox{obliquità})+E(\hbox{eccentricità})\cr}\tag{1}\label{eq:1}  \]
+
+<p> Osservando la loro dipendenza dall'obliquità e dalla eccentricità, ne discende evidentemente che se</p>
+
+\[\epsilon=0\quad\Longrightarrow\quad E(\hbox{obliquità})=0,\tag{2}\label{eq:2}\]
+
+<p>così come</p>
+
+\[e=0\quad\Longrightarrow\quad E(\hbox{eccentricità})=0. \tag{3}\label{eq:3}\]
+
+<p>Questi due contributi sono entrambi periodici ma con periodicità diverse come appare evidente anche nei rispettivi grafici di figura <a href="#appendice02_fig06">6</a>.
+
+   <figure id="appendice02_fig06">
+    <img src="./immagini/appendice02_fig06.svg" class="img-centratabordo" style="width: 50%" />
+    <figcaption>Fig. A.6. Analemma e sue componenti.</figcaption>
+  </figure>
+
+  <p>Analizzate separatamente, la componente \(E(\hbox{eccentricità})\) presenta un periodo di un anno e il rispettivo grafico interseca l'asse orizzontale in corrispondenza del perielio (attorno al 3, 4 di gennaio) e dell'afelio (attorno al 5, 6 luglio). Se questo fosse l'unico contributo in corrispondenza di questi apsidi il Sole vero sarebbe in coincidenza con quello fittizio. L'entità massima in minuti di questa componente è pari a circa \(7.65'\), rappresentata in figura <a href="#appendice02_fig06">6</a> come una debole fascia in colore.<br/>
+     La periodicità di \(E(\hbox{obliquità})\) è invece semestrale e il suo grafico interseca l'asse orizzontale in corrispondenza degli equinozi e solstizi: ciò si giustifica in quanto la variazione della declinazione che avviene tra il solstizio estivo \(\delta=+23.44^\circ\) e quello invernale \(\delta=-23.44^\circ\) è del tutto simile a quella che avviene nel ciclo successivo dal solstizio invernale a quello estivo. L'entità massima di questa componente è invece pari a circa \(9.87'\) e supera di circa \(2'\) il contributo precedente. Inoltre entrambe le componenti non sono in fase annullandosi, per esempio, in momenti diversi.</p>
+    
+    <p>Un ulteriore motivo di asimmetria emerge se rappresentiamo la sola componente \(E(\hbox{obliquità})\) nell'ipotesi di eccentricità nulla \eqref{eq:3}. In tal caso l'orbita terrestre risulterebbe circolare e di conseguenza, per le leggi di Keplero, verrebbe percorsa a velocità costante.  La rispettiva analemma avrebbe la forma di figura <a href="#appendice02_fig07">7</a>, forma che mostra una evidente simmetria non solo rispetto all'asse verticale ma pure rispetto all'asse orizzontale: per tale motivo la curva possiede una simmetria centrale con il centro costituito dagli equinozi \(\delta=0^\circ\) dove \(E(\hbox{obliquità})=0\). Il Sole e il Sole fittizio culminerebbero assieme, come detto, nei solstizi  e agli equinozi. Un moto orbitale a velocità costante implica quindi un'analemma del tutto simmetrica nel piano \((E,\delta)\).</p>
+    
+    <p>Comunque, poiché in \eqref{eq:1} queste componenti vanno sommate, l'asimmetria  dell'analemma nel piano \((E,\delta)\)<a href="#appendice02_fig05">5</a> deriva  
+      
+      <ul><li>dalla diversa periodicità di entrambe;</li>
+        <li>dalla loro differenza di fase: in particolare notiamo come i massimi e i minimi, anche quelli raggiunti attorno alla metà di maggio e fine luglio, non presentino valori opposti: diversamente accadrebbe se le componenti fossero in fase;</li>
+      <li>dalla variazione di velocità orbitale che comporta un'orbita ellittica (più elevata in prossimità del perielio, minore in prossimità dell'afelio).</li></ul>
+      
+
+   <figure id="appendice02_fig07">
+    <img src="./immagini/appendice02_fig07.svg" class="img-centratabordo" style="width: 30%" />
+    <figcaption>Fig. A.7. Componente obliquità dell'analemma con eccentricità nulla.</figcaption>
+  </figure>
+
+      
+
+    <p>Per completezza, il caso opposto \eqref{eq:2} con \(e=0.0167\) l'ipotetica analemma si ridurrebbe ad un segmento orizzontale in quanto la declinazione solare data dalla \eqref{eq:98} sarebbe nulla: pertanto nella figura <a href="#appendice02_fig07">7</a> essa appare come un semplice segmento orizzontale (evidenziato in rosso).</p>
+
+
+    <h1>Analemma in coordinate altazimutali a diverse latitudini</h1>
+
+<p>Se rappresentiamo il caso \eqref{eq:3} (\(e=0\)) proiettato sulla sfera celeste in coordinate altazimutali tramite le \eqref{eq:1.103} e \eqref{eq:1.105} </p>
+
+  \[ \cases{A = \arctan\kern-2pt2(\cos \delta \sin H, \sin\phi\cos\delta\cos H- \cos\phi \sin\delta)\cr
+a = \arcsin(\cos\phi \cos \delta \cos H+ \sin\phi \sin \delta)\cr}\tag{4}\label{eq:4}\]
+
+<p>otteniamo, alla latitudine \(\phi=45^\circ\) l'immagine di sinistra di figura <a href="#appendice02_fig08">8</a>. Questa mostra ancora una simmetria ma solo rispetto all'asse verticale del mezzogiorno locale. 
+
+     <figure id="appendice02_fig08">
+    <img src="./immagini/appendice02_fig08.svg" class="img-centratabordo" style="width: 45%" />
+    <figcaption>Fig. A.8. Analemma nell'ipotesi di eccentricità nulla (\(\phi=45^\circ\)) a sinistra e corrispondente analemma reale.</figcaption>
+  </figure>
+
+  <p>I due lobi possiedono ora dimensioni diverse e l'altezza del nodo, cui corrisponde \(\delta=0^\circ\), è uguale alla colatitudine (in figura uguale alla latitudine, ma non nella successiva <a href="#appendice02_fig09">9</a>). Questa ipotetica rappresentazione dipende evidentemente dalla trasformazione \eqref{eq:4} che collega le coordinate equatoriali orarie \((\delta, H)\) a quelle altazimutali \((a,A)\), trasformazione nella quale interviene la latitudine dell'osservatore \(\phi\) e ci permette, ancora una volta,  di comprendere l'azione della componente eccentrica. La presenza di questa componente comporta un significativo capovolgimento sia nella larghezza in azimut di ciascun lobo e sia nella loro dimensione in altezza pur rimanendo costante l'escursione di \(2\times 23.44^\circ\) in altezza. La dipendenza dalla velocità orbitale rappresenta quindi la causa principale dell'asimmetria anche nella prospettiva altazimutale: a maggior ragione se consideriamo come il nodo non sia più associato agli equinozi e la sua altezza non sia quindi pari alla colatitudine.</p> 
+
+  <p>Riassumiamo visivamente nella parte destra di figura <a href="#appendice02_fig09">9</a>  la dipendenza dell'analemma con le latitudini e riportandone la forma assunta alle latitudini comprese tra \(30^\circ\) e \(90^\circ\) Nord e con incrementi di \(2^\circ\). A sinistra riportiamo invece la sola componente dovuta all'obliquità. Notiamo inoltre come all'aumentare della latitudine il lobo invernale (per l'emisfero Nord!) non sia più visibile nella sua interezza avendo un'altezza negativa: ciò accade in quanto oltre il circolo polare artico sappiamo che vi sono periodi dell'anno nei quali il Sole è permanentemente al di sotto dell'orizzonte.</p>
+
+         <figure id="appendice02_fig09">
+    <img src="./immagini/appendice02_fig09.svg" class="img-centratabordo" style="width: 45%" />
+    <figcaption>Fig. A.9. Analemma a diverse latitudini (destra) e componente dovuta alla sola obliquità (incrementi di \(2^\circ\)).</figcaption>
+  </figure>
+
+
+  <h1>Analemma, fuso orario e ora di osservazione</h1>
+
+  <p>Finora abbiamo considerato la posizione solare rilevata alle ore \(12\) locali di tempo medio \(LMT\) riferendola, in azimut, al meridiano locale che invece indica il mezzogiorno vero \(AST\). Tuttavia, l'ora civile riportata da un comune orologio dipende da altri fattori come il fuso orario, l'ora legale o l'appartenenza o meno ad una data nazione, fattori legati a convenzioni che influenzano e spostano l'indicazione civile del mezzogiorno. Questo spostamento, se non considerato, si riflette anche nella forma e nella posizione dell'analemma.</p>
+
+  <p>Se quindi ci poniamo alla longitudine di \(15^\circ\) Est il nostro orologio segna l'ora del fuso orario dell'Europa Centrale \({CET}={UTC}+1\) e alle ore \(12\,{CET}\) potremo rilevare la posizione solare in anticipo o in ritardo nello stesso modo di un osservatore posto al meridiano di Greenwich, seppure un'ora prima. L'analemma quindi in questa situazione è la medesima per entrambi gli osservatori.</p>
+
+  <p>Se invece ci poniamo alla longitudine di \(\lambda=15^\circ+7^\circ=22^\circ\) Est, il nostro orologio segna ancora l'ora del fuso orario dell'Europa Centrale in quanto compreso ancora nell'intervallo di longitudini che lo definisce \([15^\circ-7.5^\circ,15^\circ+7.5^\circ]\) ma alle ore \(12\,{CET}\) il Sole è in anticipo di \((7^\circ/15^\circ)60'=28'\) rispetto al meridiano centrale di \(15^\circ\). L'analemma quindi è spostato verso Ovest rispetto all'effettivo meridiano locale.   Se invece ci poniamo alla longitudine di \(\lambda=15^\circ-7^\circ=8^\circ\) Est, il nostro orologio segna ancora l'ora del fuso orario dell'Europa Centrale ma alle ore \(12\,{CET}\) il Sole è in ritardo di \(28'\) rispetto al meridiano centrale. L'analemma quindi è spostato verso Est rispetto a quello dell'osservatore (v sotto per una formalizzazione di queste osservazioni).</p>
+
+  <p>Questa situazione è riprodotta nella figura <a href="#appendice02_fig10">10</a>: se quindi rileviamo la posizione del Sole alle ore \(12\) del fuso di appartenenza caratterizzato dalla longitudine centrale \(\lambda_{cen}\), troveremo un'analemma spostata verso Ovest se la nostra longitudine \(\lambda\) è maggiore di quella centrale del fuso \(\lambda>\lambda_{cen}\), viceversa se \(\lambda<\lambda_{cen}\). E siccome un grado di longitudine corrisponde a 4 minuti e 16.5 minuti è lo scostamento massimo dell'equazione del tempo, è sufficiente che la longitudine dell'osservatore differisca di \(4^\circ\) dal meridiano centrale del fuso perché l'analemma sia tutta verso Ovest o tutta verso Est.</p>
+
+           <figure id="appendice02_fig10">
+    <img src="./immagini/appendice02_fig10.svg" class="img-centratabordo" style="width: 30%" />
+    <figcaption>Fig. A.10. Analemma a diverse longitudini rispetto al meridiano centrale del fuso orario.</figcaption>
+  </figure>
+
+  <p>Quanto appena osservato equivale sostanzialmente all'osservazione dell'analemma in tempi diversi dalle canoniche \(12\,\hbox{h}\) del fuso orario di appartenenza. Nella parte sinistra delle figure seguenti,  <a href="#appendice02_fig11">11</a>, <a href="#appendice02_fig12">12</a> e <a href="#appendice02_fig13">13</a>, riportiamo pertanto il risultato del calcolo e la posizione dell'analemma rispetto all'orizzonte rispettivamente per le latitudini intermedie, per il polo Nord e per l'Equatore: a sinistra i diversi analemmi sono riferiti al piano altazimutale (e quindi la loro forma subisce una distorsione perché proiettati in un piano) mentre alla destra (ne tracciamo solo alcuni ma tutti uguali) appaiono proiettati nella sfera celeste del sistema equatoriale.</p>
+
+           <figure id="appendice02_fig11">
+    <img src="./immagini/appendice02_fig11.svg" class="img-centratabordo" style="width: 90%" />
+    <figcaption>Fig. A.11. Analemmi ad ore diverse alle medie latitudini.</figcaption>
+  </figure>
+
+  <figure id="appendice02_fig12">
+    <img src="./immagini/appendice02_fig12.svg" class="img-centratabordo" style="width: 95%" />
+    <figcaption>Fig. A.12. Analemmi ad ore diverse al polo Nord.</figcaption>
+  </figure>
+
+  <figure id="appendice02_fig13">
+    <img src="./immagini/appendice02_fig13.svg" class="img-centratabordo" style="width: 95%" />
+    <figcaption>Fig. A.13. Analemmi ad ore diverse all'Equatore.</figcaption>
+  </figure>
+
+  <p>Osservando gli analemmi delle ore 6 (o quella delle 18) di fig. <a href="#appendice02_fig11">11</a> (sia sinistra che alla destra) e considerando che il loro asse passa per i punti solstiziali possiamo chiederci quale sia l'angolo formato dall'asse meridiano con l'orizzonte. Dato che l'altezza del polo Nord Celeste sull'orizzonte è pari alla latitudine \(\phi\) dell'osservatore, scegliamo a questo fine nella figura <a href="#appendice02_fig13a">13a</a> un punto di vista che giaccia sull'asse Est-Ovest. Appare in tal caso evidente come l'angolo in questione sia uguale alla latitudine del luogo, relazione pure confermata dalle precedenti figure riguardanti analemmi al Polo e all'Equatore. Rileviamo inoltre come il punto della sfera celeste coinvolto in questa vista prospettica abbia caratteristiche geometriche peculiari in quanto è intersezione di ben tre cerchi massimi: il meridiano equatoriale orario delle ore 6 o delle 18 (in blu nella figura <a href="#appendice02_fig13a">13a</a>), l'equatore celeste (rosso in figura <a href="#appendice02_fig13a">13a</a>) cosicché possiede declinazione nulla, e l'orizzonte locale. </p>
+
+  <figure id="appendice02_fig13a">
+    <img src="./immagini/appendice02_fig13a.svg" class="img-centratabordo" style="width: 45%" />
+    <figcaption>Fig. A.13a. Asse dell'analemma alle ore 6 (o 18) e latitudine \(\phi=50^\circ\).</figcaption>
+  </figure>
+
+  <p>Poiché comunque, in corrispondenza di queste ore gli analemmi sono parzialmente sotto l'orizzonte, può risultare difficile la loro osservazione diretta per cui l'associazione tra latitudine e angolo dell'asse dell'analemma con l'orizzonte diviene approssimata dovendo fare riferimento ad analemmi ripresi nella loro interezza. Pertanto, come esempio, nella figura <a href="#appendice02_fig13b">13b</a> la relazione è soddisfatta solo in forma approssimata.</p>
+
+      <figure id="appendice02_fig13b">
+    <img src="./immagini/appendice02_fig13b.svg" class="img-centratabordo" style="width: 35%" />
+    <figcaption>Fig. A.13b. Asse dell'analemma completo alle ore 8 e alla latitudine \(\phi=50^\circ\).</figcaption>
+  </figure>
+
+<h1>Analemma e meridiane</h1>
+
+<p>Nell'appendice <a href="appendice01.html">1</a> abbiamo affrontato la proiezione stereografica delle posizioni solari su piani disposti orizzontalmente o verticali individuando le linee percorse dall'ombra dell'estremo dello stilo nei diversi giorni dell'anno e comprese tra quelle estreme dei solstizi. Assieme a queste abbiamo individuato le linee orarie che invece permettono  di rilevare l'ora solare vera. In una meridiana quindi, l'ombra dello stilo indica l'ora solare vera \(AST\) per cui, volendo risalire al tempo locale medio \(LMT\) è necessario apportare la correzione rappresentata dall'equazione del tempo \(E\) secondo la relazione già vista \eqref{eq:1.137} che riscriviamo come </p>
+
+\[ LMT = AST - E. \tag{5}\label{eq:5} \]
+
+<p>A tale scopo e per ogni giorno dell'anno va associata ad una meridiana una tabella o un grafico, per esempio come quello di figura <a href="#appendice02_fig01">1</a> (o lo stesso con valori di ordinata opposti) che riporti il valore di \(E\) da sottrarre (o, nel secondo caso, da sommare) all'ora indicata dall'ombra dello stilo per ottenere il tempo locale medio \(LMT\). In alternativa e con scelta meno formale, si può riportare direttamente la proiezione stereografica dell'analemma stesso che, di norma e per ragioni di leggibilità, si associa alla linea oraria del mezzogiorno (fig. <a href="#appendice02_fig14">14</a>).</p>
+
+  <figure id="appendice02_fig14">
+    <img src="./immagini/appendice02_fig14.svg" class="img-centratabordo" style="width: 75%" />
+    <figcaption>Fig. A.14. Proiezione stereografica dell'analemma associata alla linea oraria del mezzogiorno.</figcaption>
+  </figure>
+
+<p>Nella successiva figura <a href="#appendice02_fig15">15</a> associamo a ciascuna linea oraria, con proiezione stereografica su un piano orizzontale, il rispettivo analemma. Analogamente la figura <a href="#appendice02_fig16">16</a> riporta la proiezione di analemmi su un piano verticale leggermente inclinato verso Est.</p>
+
+  <figure id="appendice02_fig15">
+    <img src="./immagini/appendice02_fig15.svg" class="img-centratabordo" style="width: 25%" />
+    <figcaption>Fig. A.15. Proiezione stereografica di analemmi orari su piano orizzontale.</figcaption>
+  </figure>
+
+
+  <figure id="appendice02_fig16">
+    <img src="./immagini/appendice02_fig16.svg" class="img-centratabordo" style="width: 35%" />
+    <figcaption>Fig. A.16. Proiezione stereografica di analemmi orari su piano verticale con declinazione Est  della parete.</figcaption>
+  </figure>
+
+<p>Per facilitarne l'interpretazione in figura <a href="#appendice02_fig17">17</a> riportiamo due proiezioni molto prossime dove nell'immagine di destra evidenziano i giorni di inizio mese.
+
+  <figure id="appendice02_fig17">
+    <img src="./immagini/appendice02_fig17.svg" class="img-centratabordo" style="width: 65%" />
+    <figcaption>Fig. A.17. Analemma associato al meridiano locale e correzioni.</figcaption>
+  </figure>
+
+<p>Sulla base dell'immagine alla destra di fig. <a href="#appendice02_fig17">17</a> coloriamo con sfondo arancio i mesi nei quali il Sole è in anticipo rispetto al tempo medio locale, in giallo i mesi nei quali è in ritardo. Per esempio supponendo di appartenere al meridiano centrale del fuso orario, se l'ombra dello stilo il primo di novembre segna il mezzogiorno dovremo, in base alla \eqref{eq:5}, sottrarre circa \(16.5'\) per ottenere il tempo locale \(LMT\). Viceversa, il primo di agosto, se l'ombra dello stilo segna il mezzogiorno, dovremo sommare circa \(6.4'\) per ottenere il tempo locale \(LMT\) (fig. <a href="#appendice02_fig17">17</a>). </p>
+
+
+<p>Nel caso invece la longitudine locale \(\lambda_{loc}\) differisca da quella centrale del fuso \(\lambda_{cen}\) si dovrà aggiungere un'ulteriore correzione legata alle diverse longitudini. Difatti la differenza in longitudine tra due luoghi si può riportare all'intervallo di tempo che, per esempio, separa la culminazione del Sole nei due luoghi. La semplice relazione è </p>
+
+  \[\Delta T=\left({\lambda-\lambda_{cen}\over 15^\circ}\right)60'\qquad (\hbox{min})
+  \tag{6}\label{eq:6}\]
+  
+  <p>e questa fornisce valori positivi se \(\lambda>\lambda_{cen}\) cioè per luoghi ad Est del meridiano di riferimento, negativa invece ad Ovest. L'equazione \eqref{eq:5} va di conseguenza integrata dalla
+
+    \[LMT+\Delta T = AST - E \tag{7}\label{eq:7}\]
+
+    <p>per cui </p>
+
+    \[LMT = AST - E - \Delta T. \tag{8}\label{eq:8}\]
+
+<p>In pratica, per una longitudine \(\lambda_{loc}=11.5^\circ\) che è ad Ovest del meridiano centrale del fuso \(\lambda_{cen}=15^\circ\), la differenza di longitudine risulta \(\Delta \lambda=\lambda-\lambda_{cen}=-3.5^\circ\) e la correzione \eqref{eq:6} da apportare all'equazione del tempo è \(\Delta T=-14'\). Pertanto, se l'ombra dello stilo il primo di novembre segna il mezzogiorno, per ottenere il tempo locale \(LMT\) dovremo sottrarre all'equazione del tempo \(E\) anche questa ulteriore correzione negativa. In tal caso a completamento delle precedenti osservazioni, il primo di novembre l'equazione del tempo vale circa \(E=16.5'\) (fig. <a href="#appendice02_fig01">1</a>) e quindi dalla \eqref{eq:8}</p>
+  
+\[ LMT = 12\,\hbox{h} - 16.5' - (-14') = 11\,\hbox{h}\,57'\,30''.\tag{9}\label{eq:9}\]
+
+<p>Lo stesso calcolo, per la stessa località e per il primo di agosto, fornisce per \(LMT\) il valore
+
+  \[LMT = 12\,\hbox{h}+6.4'-(-14')=12\,\hbox{h}\,20'\,24''.\tag{10}\label{eq:10}\]
+  
+  <p>Poiché questa integrazione alla relazione tra \(AST\) e \(LMT\) dipende evidentemente dalla differenza in longitudine con il meridiano di riferimento del fuso, è possibile predisporre meridiane che tengano conto di tale contributo e quindi ridurre la necessaria correzione al tempo vero, alla sola equazione del tempo \(E\). Queste ultime, a differenza dei quadranti su pareti verticali nei quali la linea oraria del mezzogiorno vero è sempre verticale, presentano invece una linea oraria del mezzogiorno inclinata.
+
+
+
+
+</body>

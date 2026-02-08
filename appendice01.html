@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+
+<html lang="it">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="Keywords" content="didattica, fisica, astronomia, matematica" />
+  <!--  -->
+  <link rel="stylesheet" type="text/css" href="../../webNew/www.lorenzoroi.net/risorse/fogliostile.css" media="all" />
+  <!-- mathjax -->
+  <script type="text/x-mathjax-config">
+      window.MathJax = {
+        tex: {
+          tags: 'ams'
+        }
+      };
+    </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+
+  <!-- stili locali -->
+  <style>
+    body {
+      font-family: sans-serif;
+      font-size: 90%;
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 5%;
+      line-height: 1.3;
+    }
+
+    h1 {
+      font-family: sans-serif;
+      font-size: 150%;
+      font-weight: bold;
+    }
+
+    .titolo {
+      font-family: sans-serif;
+      font-size: 180%;
+      font-weight: bold;
+    }
+
+    .grassetto {
+      font-family: sans-serif;
+      font-weight: bold;
+    }
+
+    figure {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    figcaption {
+      padding: 10px;
+      text-align: center;
+    }
+
+    .img-centrata {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border: 2px solid rgb(180, 180, 180);
+    }
+
+    .img-centratabordo {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 15px;
+      border: 2px solid rgb(180, 180, 180);
+    }
+
+    div.centra {
+      text-align: center;
+    }
+
+    .nota {
+      background-color: #ffdddd;
+      border-left: 6px solid #f44336;
+      line-height: 1.3;
+      padding: 5px 10px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 100%;
+      color: blue;
+      border: 0px;
+    }
+
+    p.dettagli {
+      background-color: #e9fdff;
+      margin-left: 5%;
+      margin-right: 5%;
+      padding: 5px 10px;
+      border-left: 1px solid blue;
+      border-right: 1px solid blue;
+      border-top: 1px solid blue;
+      border-bottom: 1px solid blue;
+      padding: 20px 20px;
+    }
+
+.alCentro {
+      text-align: center;
+    }
+
+    dl {
+      padding: 10px 10px;
+      border: 1px solid blue;
+      background-color: #e9fdff;
+    }
+
+    dt {
+      font-weight: bold;
+      font-size: 12pt;
+    }
+
+    .enunciato {
+      text-align: left;
+      line-height: 1.8;
+      font-family: arial, verdana, sans-serif;
+      background-color: #ffffbb;
+      border: 1px solid #ff0000;
+      border-left: 6px solid #ff0000;
+      font-size: 100%;
+      line-height: 1.6;
+      padding: 5px;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+
+    .entroenunciato {
+      margin-top: 0px;
+    }
+
+    img.block {
+      display: block;
+    }
+
+    .ex-ref {
+      font-style: italic;
+      font-size: 100%;
+    }
+
+    table {
+      table-layout: auto;
+      width: 90%;
+      margin: 10px auto;
+      border-collapse: separate;
+      border-top: 1px solid #999999;
+      border-bottom: 1px solid #999999;
+    }
+
+    th {
+      vertical-align: center;
+      padding: 0.6em;
+      width: auto;
+      background-color: rgb(198, 242, 243);
+      /* background-color: #ffffcc; */
+    }
+
+    td {
+      vertical-align: center;
+      padding: 0.6em;
+      width: auto;
+    }
+
+    .allineaAllaDestra {
+      text-align: right;
+    }
+
+    .allineaAlCentro {
+    text-align: center;
+}
+
+tbody tr:nth-child(odd) {
+      background-color: #eeeeee;
+    }
+
+    caption {
+      padding: 1em;
+      font-style: italic;
+      caption-side: bottom;
+      letter-spacing: 1px;
+    }
+  </style>
+
+  <title>Appendice 1</title>
+</head>
+<!-- fine head -->
+
+<body>
+  <h1>Appendice 1</h1>
+
+  <h1>Gnomonica matematica</h1>
+
+  <p>In questa appendice intendiamo ottenere le equazioni matematiche che descrivono il percorso seguito su un piano orizzontale dall'estremo di un'asta disposta verticalmente al variare della posizione solare durante il dì. Poiché il termine che individua tale asta o stilo è lo <em>gnomone</em>, intendiamo qui sviluppare, parzialmente ma con deduzioni matematiche, quanto sta alla base della <em>gnomonica</em> intesa quale studio delle posizioni apparenti solari rilevate attraverso le ombre. In sostanza vorremmo comprendere il funzionamento di una meridiana.</p>
+
+  <p>La situazione iniziale da cui partire è rappresentata schematicamente in figura 1 dove riportiamo la traiettoria seguita dal Sole nell'intervallo tra alba e tramonto, supponendo evidentemente che durante tale intervallo la sua declinazione rimanga costannte. Come già discusso tale approssimazione si dimostra del tutto adeguata ai nostri obiettivi didattici.</p>
+
+  <figure id="appendice01_fig1">
+    <img src="./immagini/appendice01_fig01.png" class="img-centratabordo" style="width: 70%" />
+    <figcaption>Fig. A.1. Percorso solare e ombra proiettata dallo gnomone.</figcaption>
+  </figure>
+
+  <p>Nella figura la sfera celeste è centrata sull'estremità superiore dello gnomone (punto origine \(O(0,0,0)\) della terna destrorsa \((\mathbf{i}, \mathbf{j}, \mathbf{k})\)) e il piano orizzontale \(\pi\) è tangente alla sfera nel punto di innesto al suolo dello gnomone di coordinate \((0,0,-1)\). La sfera ha pertanto raggio unitario come la lunghezza dello gnomone. La linea che collega il Sole con il punto \(P\) del piano \(\pi\)  rappresenta un raggio solare per cui \(P\) è la proiezione sul piano orizzontale di \(O\). In realtà \(P\) è la proiezione pure di un secondo punto definito dall'intersezione del segmento \(OP\) con la sfera celeste e ciò mette in luce come non sia possibile, con tale costruzione, stabilire una corrispondenza biunivoca tra i punti di una sfera e i punti del piano. Nella proiezione gnomonica quindi si coinvolge un solo emisfero e, com'è ovvio nel nostro caso, quello con coordinata verticale \(z\) positiva.</p>
+
+  <p id="proceduraParticolare">Per determinare il legame tra la posizione solare e quella dell'ombra proiettata dallo gnomone basterà ricavare le coordinate del punto \(P\) in funzione dei parametri che definiscono la posizione solare che, per ora, indichiamo come \(S(x_S,y_S,z_S)\). Questa terna rappresenta pure le componenti del vettore \(\mathbf{v}\) che, a partire da \(O\), individua il Sole \(\mathbf{v}=(x_S,y_S,z_S)\) e tramite il quale definiamo la retta \(OP\): in termini del parametro \(t\) questa può essere scritta come</p>
+
+  \[OP\colon (x,y,z)= t\,\mathbf{v}\qquad\Longrightarrow\qquad (x,y,z)= t\,(x_S, y_S, z_S)\tag{1}\label{eq:1}\]
+
+  <p>essendo \(P(x,y,z)\) le coordinate ancora incognite di \(P\). L'intersezione di questa retta con il piano \(\pi\) di equazione \(\pi\colon z=-1\) permette di determinare \(t\)</p>
+
+  \[(x,y,-1)=t\,(x_S,y_S,z_S)\qquad\Longrightarrow\qquad -1=t\,z_S\qquad\Longrightarrow\qquad  t=-{1\over z_S}\tag{2}\label{eq:2}\]
+
+  <p>per cui \(P\) possiede coordinate</p>
+
+  \[P\left(-{x_S\over z_S},-{y_S\over z_S},-1\right) \tag{3}\label{eq:3}\]
+
+  <p>Riprendiamo ora le relazioni che individuano un punto nel sistema equatoriale orario (<strong>GOE</strong>, <em>Geocentrico Orario Equatoriale</em>) e rappresentate nella pagina principale dalla \eqref{eq:1.17a}
+
+   \[  \cases{\eqalign{x &= \cos\delta\cos H\cr y &= \cos \delta\sin H\cr z &= \sin\delta.\cr}\tag{4}\label{eq:4}} \]
+
+   <p>Per riportarle al sistema altazimutale <strong>TAA</strong> è necessario eseguire la rotazione \(R_y(90^\circ-\phi)\) attorno all'asse \(y\) di angolo \(90^\circ-\phi\), dove \(\phi\) è la latitudine geografica dell'osservatore (v. <a href="sunPosition.html#rotazione">pagina principale</a>). Tale rotazione è descritta dalla \eqref{eq:2.01a}</p>
+
+  \[ R_y(90°-\phi)=\begin{pmatrix} \sin\phi & 0& -\cos\phi \cr 0&1&0\cr \cos\phi &0& \sin\phi\cr \end{pmatrix} .\tag{5}\label{eq:5} \]
+
+    <p>per cui le coordinate del Sole nel sistema altazimutale associato alla figura <a href="#appendice01_fig1">A.1</a> sono </p>
+
+    \[ \begin{pmatrix}x_S\cr y_S\cr z_S\cr\end{pmatrix} = \begin{pmatrix} \sin\phi & 0& -\cos\phi \cr 0&1&0\cr \cos\phi &0& \sin\phi\cr \end{pmatrix} \begin{pmatrix}x\cr y\cr z\cr\end{pmatrix} \tag{6}\label{eq:6} \]
+
+    <p>ovvero, inserite le \eqref{eq:4} ed esplicitando le componenti</p>
+
+    \[ \cases{\eqalign{x_S &= \sin\phi\cos\delta\cos H - \cos\phi\sin\delta\cr y_S &= \cos\delta\sin H\cr z_S &= \cos\phi\cos\delta\cos H + \sin\phi\sin\delta.\cr}\tag{7}\label{eq:7}} \]
+
+    <p>Inserendo queste espressioni nelle coordinate di \(P\) date dalla \eqref{eq:3}  otteniamo</p>
+
+    \[ 
+\bbox[border:1px solid red,15px,#ffffcc]{
+    P\left({\cos\phi\sin\delta-\sin\phi\cos\delta\cos H \over \cos\phi\cos\delta\cos H + \sin\phi\sin\delta},{-\cos\delta\sin H\over \cos\phi\cos\delta\cos H + \sin\phi\sin\delta }, -1\right).}\tag{8}\label{eq:8} \]
+
+<p>Poiché la latitudine dell'osservatore è nota e nell'intervallo di tempo tra alba e tramonto possiamo assumere la costanza della declinazione, lo studio della traccia dell'ombra dell'estremo dello gnomone sul piano \(\pi\), traccia che viene indicata come   <em>linea diurna</em> dello gnomone, si riduce all'analisi della funzione parametrica bidimensionale</p>
+    
+    \[
+    P\left({\cos\phi\sin\delta-\sin\phi\cos\delta\cos H \over \cos\phi\cos\delta\cos H + \sin\phi\sin\delta},{-\cos\delta\sin H\over \cos\phi\cos\delta\cos H + \sin\phi\sin\delta }\right)\tag{9}\label{eq:9}
+    \]
+    
+    <p>dove l'unica grandezza variabile è l'angolo orario \(H\).</p>
+
+
+    <h1>Linea degli equinozi</h1>
+
+<p>Agli equinozi, la declinazione del Sole è nulla, \(\delta=0\), per cui la funzione parametrica \eqref{eq:9} si semplifica notevolmente e assume la forma</p>
+
+    \[ P\left({-\sin\phi\cos H \over \cos\phi\cos H }, {-\sin H\over \cos\phi\cos H }\right)= P\left(-\tan\phi, -{\tan H\over \cos\phi}\right) \tag{10}\label{eq:10} \]
+
+    <p>che riscriviamo come </p>
+
+    \[P\colon\cases{\eqalign{x &= -\tan\phi\cr y &= -{\tan H\over \cos\phi}.\cr}\tag{11}\label{eq:11}} \]
+
+    <p>L'ascissa \(x\) di \(P\) è evidentemente costante dipendendo dalla sola latitudine \(\phi\) dell'osservatore mentre l'ordinata varia con \(H\). Poiché l'angolo orario \(H\) al sorgere del Sole nell'equinozio è pari a \(-90^\circ\) (oppure \(270^\circ\)) e al tramonto è (90^\circ\)  la funzione \(\tan H\) varia tra \(-\infty\) e \(+\infty\) come, di conseguenza, l'ordinata \(y\). La funzione \eqref{eq:11} rappresenta pertanto una retta e la traccia dell'ombra sul piano \(\pi\) è quindi la retta parallela all'asse delle ordinate e, al mezzogiorno quando \(H=0\)  passa per il punto \((-\tan\phi,0)\). Il grafico di tale funzione è rappresentato in 3D nella figura <a href="#appendice01_fig2">A.2</a> alla latitudine di \(45^\circ\)  mentre nella successiva  fig.<a href="#appendice01_fig3">A.3</a> è riportata sul piano \(\pi\) dove, per riferimento, compaiono pure i relativi versori di base.</p>
+
+
+      <figure id="appendice01_fig2">
+    <img src="./immagini/appendice01_fig02.svg" class="img-centratabordo" style="width: 70%" />
+    <figcaption>Fig. A.2. Equinozio e ombra proiettata dallo gnomone.</figcaption>
+  </figure>
+
+       <figure id="appendice01_fig3">
+    <img src="./immagini/appendice01_fig03.svg" class="img-centratabordo" style="width: 40%" />
+    <figcaption>Fig. A.3. Equinozio e ombra proiettata dallo gnomone sul piano \(\pi\).</figcaption>
+  </figure>
+
+  <h1>Linea diurna in un giorno qualunque</h1>
+
+  <p>Se invece consideriamo un giorno qualsiasi, la declinazione del Sole sarà diversa da zero ma costante per cui, volendo ottenere la funzione che rappresenti la traccia iniziamo riscrivendo la \eqref{eq:9} come </p>
+
+  \[ P\colon\cases{\eqalign{x &= {\cos\phi\sin\delta-\sin\phi\cos\delta\cos H \over \cos\phi\cos\delta\cos H + \sin\phi\sin\delta }\cr y &= {-\cos\delta\sin H\over \cos\phi\cos\delta\cos H + \sin\phi\sin\delta }.\cr}\tag{12}\label{eq:12}} \]
+
+  <p>Poiché l'espressione precedente non è immediatamente classificabile in questa sezione cercheremo con <em>numerosi</em> passaggi algebrici di riportarla ad una forma canonica adeguata. Intendiamo quindi dimostrare che la coppia di equazioni \eqref{eq:12} rappresenta una iperbole traslata.<br/> 
+    Per fare ciò dovremo eliminare il parametro \(H\) sfruttando l'identità fondamentale \eqref{eq:13}</p>
+ 
+     \[\sin^2 H + \cos^2 H = 1.\tag{13}\label{eq:13}\]
+
+    <p>e quindi ottenere l'equazione che coinvolga direttamente l'ascissa \(x\) con l'ordinata \(y\) di \(P\) Interpretiamo pertanto la \eqref{eq:12} come un sistema di due equazioni nelle incognite \( \sin H \) e \( \cos H \). Dalla prima abbiamo </p>
+
+  \[x(\cos\phi\cos\delta\cos H + \sin\phi\sin\delta )=\cos\phi\sin\delta-\sin\phi\cos\delta \cos H \tag{14}\label{eq:14}\]
+
+  <p>da cui con passaggi algebrici elementari otteniamo</p>
+
+  \[\eqalign{x\cos\phi\cos\delta\cos H + x\sin\phi\sin\delta &= \cos\phi\sin\delta - \sin\phi\cos\delta \cos H \cr 
+  (x\cos\phi\cos\delta + \sin\phi\cos\delta)\cos H &=\cos\phi\sin\delta - x\sin\phi\sin\delta \cr}\tag{15}\label{eq:15}\]
+
+  </p>e quindi</p>
+
+  \[\cos H = {\cos\phi\sin\delta - x\sin\phi\sin\delta \over x\cos\phi\cos\delta + \sin\phi\cos\delta } = { \sin\delta(\cos\phi - x\sin\phi) \over \cos\delta(x\cos\phi + \sin\phi)}\tag{16}\label{eq:16}\]
+
+<p>Dalla seconda delle \eqref{eq:12} abbiamo invece</p>
+
+\[y(\cos\phi\cos\delta\cos H + \sin\phi\sin\delta )=-\cos\delta \sin H \tag{18}\label{eq:18}\]
+
+  <p>dalla quale, ancora con passaggi algebrici elementari, deriviamo</p>
+
+  \[\eqalign{y\cos\phi\cos\delta\cos H + y\sin\phi\sin\delta &= -\cos\delta \sin H \cr
+\cos\delta \sin H &= -y\cos\phi\cos\delta\cos H - y\sin\phi\sin\delta\cr} \tag{19}\label{eq:19}\]
+
+  <p>e quindi</p>
+
+  \[\sin H = {-y\cos\phi\cos\delta\cos H - y\sin\phi\sin\delta \over \cos\delta }={-y\cos\phi} \cos H - y\sin\phi\tan\delta \tag{20}\label{eq:20}
+  \]
+
+  <p>Per eliminare la dipendenza da \(\cos H\) sfruttiamo la \eqref{eq:16} inserendola nella \eqref{eq:20}</p>
+
+  \[\sin H = -y\cos\phi \left({\cos\phi\sin\delta - x\sin\phi\sin\delta \over \cos\delta(x\cos\phi + \sin\phi)}\right) - y\sin\phi{\sin\delta\over\cos\delta}, \tag{21}\label{eq:21}\]
+
+  <p>e, portando a fattore il termine \(\cos\delta\), otteniamo</p>
+
+  \[\sin H = {1\over\cos\delta}\left[-{y\cos\phi(\cos\phi\sin\delta - x\sin\phi\sin\delta) \over x\cos\phi + \sin\phi} - y\sin\phi\sin\delta \right] \tag{22}\label{eq:22}\]
+
+  <p>dalla quale, con ulteriori passaggi algebrici, ne deriva</p>
+
+  \[\eqalign{
+  \sin H &= {1\over\cos\delta}\left({-y\cos^2\phi\sin\delta + xy\sin\phi\cos\phi\sin\delta - xy\sin\phi\sin\delta\cos\phi - y\sin^2\phi\sin\delta \over x\cos\phi - \sin^2\phi}\right) \cr
+  &= {1\over\cos\delta}\left({- y\sin^2\phi\sin\delta - y\cos^2\phi\sin\delta \over x\cos\phi + \sin\phi}\right) \cr
+  &= -{y\sin\delta \over \cos\delta(x\cos\phi + \sin\phi)}\cr} \tag{23}\label{eq:23}\]
+
+<p>A questo punto  le due funzioni goniometriche dell'angolo orario sono espresse entrambe in termini delle sole variabili \(x\) e \(y\) per cui inseriamo le espressioni \eqref{eq:16} e \eqref{eq:23} nella \eqref{eq:13} ne deriva un'equazione priva della dipendenza da \(H\)</p>
+
+\[\left[{ \sin\,\delta (\cos\, \phi\, -\, x\, \sin\,\phi) \over \cos\,\delta(x\,\cos\,\phi\, +\, \sin\,\phi)}\right]^2+\left[ -{y\, \sin\,\delta \over \cos\,\delta\, (x\,\cos\,\phi\, +\, \sin\,\phi)}\right]^2=1.\tag{24}\label{eq:24}\]
+
+  <p> Per riportare quest'ultima scrittura ad una forma che possa rientrare in ambiti noti standard dovremo applicare non solo le normali proprietà algebriche delle equazioni ma sfruttare pure diverse identità goniometriche.<br/>
+     Al fine di disporre le variabili al numeratore, moltiplichiamo entrambi i membri per il quadrato del denominatore comune</p>
+
+  \[
+  \sin^2\delta(\cos\phi - x\sin\phi)^2 + y^2\sin^2\delta =
+  \cos^2\delta(x\cos\phi + \sin\phi)^2  \tag{25}\label{eq:25}\]
+
+  <p>dalla quale, dividendo entrambi i membri per \(\cos^2\delta\), otteniamo</p>
+
+  \[\tan^2\delta(\cos\phi - x\sin\phi)^2 + y^2\tan^2\delta = 
+  (x\cos\phi + \sin\phi)^2. \tag{26}\label{eq:26}\]
+
+  <p>Svolgendo i quadrati e mantenendo a primo membro solo i termini dipendendi da \(x\) e \(y\) ne deriva l'espressione</p>
+
+  \[
+(\sin^2\phi\tan^2\delta - \cos^2\phi)x^2- 2\sin\phi\cos\phi(\tan^2\delta + 1)x + y^2\tan^2\delta = \sin^2\phi - \cos^2\phi\tan^2\delta. \tag{27}\label{eq:27}\]
+
+ <p>Riscriviamo innanzitutto i coefficienti di \(x\) e \(y\) e termine noto utilizzando le usuali identità goniometriche nonché le formule di prostaferesi e di addizione così da far emergere il fattore comune \(\sec^2\delta\): otteniamo</p>
+
+ \[\eqalign{\sin^2\phi\tan^2\delta-\cos^2\phi&=-{\sec^2\delta\over 2}(\cos2\delta+\cos2\phi)\cr
+ \tan^2\delta + 1 &= {1\over \cos^2\delta}=\sec^2\delta\cr
+ 2\sin\phi\cos\phi(\tan^2\delta + 1) &= \sin2\phi\sec^2\delta\cr
+\tan^2\delta&={\sec^2\delta\over 2}(1-\cos2\delta)\cr
+\sin^2\phi - \cos^2\phi\tan^2\delta&={\sec^2\delta\over 2}(\cos2\delta-\cos 2\phi).\cr}\tag{28}\label{eq:28}\]
+
+
+  <p>La \eqref{eq:27} diventa ora</p>
+
+\[
+-{\sec^2\delta\over 2}(\cos2\delta+\cos2\phi)x^2- (\sin2\phi\sec^2\delta) x+{\sec^2\delta(1-\cos2\delta)y^2\over 2}={\sec^2\delta\over 2}(\cos2\delta-\cos2\phi) \tag{29}\label{eq:29}\]
+
+<p>e moltiplicando per \(-2/\sec^2\delta\) tutti i termini giungiamo alla</p>
+
+\[(\cos2\delta+\cos2\phi)x^2+ 2x\sin2\phi  - (1-\cos2\delta)y^2 = \cos2\phi-\cos2\delta.  \tag{30}\label{eq:30}\]
+
+  <p>Completiamo il quadrato per i termini in \(x\) sommando ad entrambi i membri il termine </p>
+
+  \[{\sin^2 2\phi\over \cos2\delta+\cos2\phi}\]
+
+  <p>per cui</p>
+
+\[\eqalign{(\cos2\delta+\cos2\phi)&\left[x^2 + {2x\sin2\phi \over \cos2\delta+\cos2\phi} + \left({\sin2\phi \over \cos2\delta+\cos2\phi}\right)^2\right] - (1-\cos2\delta)y^2 \cr &\hskip1.5cm = \cos2\phi-\cos2\delta + {\sin^2 2\phi \over \cos2\delta+\cos2\phi} \cr}\tag{31}\label{eq:31}\]
+
+  <p>e quindi</p>
+
+  \[\eqalign{(\cos2\delta+\cos2\phi)\left[x + {\sin2\phi \over \cos2\delta+\cos2\phi}\right]^2 - (1-\cos2\delta)y^2 
+&= {\cos^2 2\phi-\cos^2 2 \delta + \sin^2 2\phi \over \cos2\delta+\cos2\phi} \cr &= {\sin^2 2\delta \over \cos2\delta+\cos2\phi} \cr}\tag{32}\label{eq:32}\]
+
+<p>Se ora indichiamo i coefficienti come</p>
+
+\[A=\cos2\delta+\cos2\phi,\qquad B=1-\cos2\delta,\qquad C={\sin^2 2\delta \over \cos2\delta+\cos2\phi}, \tag{33}\label{eq:33}\]
+
+<p>la \eqref{eq:32} può essere riscritta come</p>
+
+\[A\left[x + {\sin2\phi \over A}\right]^2 - By^2 = C \tag{34}\label{eq:34}\]
+
+<p>oppure, riportandola alla forma canonica</p>
+
+\[
+\bbox[border:1px solid red,15px,#ffffcc]{
+\gamma:{\displaystyle\left(x + {\sin2\phi \over A}\right)^2\over C/A} - \frac{y^2}{C/B} = 1.} \tag{35}\label{eq:35}\]
+
+<p>con i rapporti \(C/A\) e \(C/B\) dati dalle</p>
+
+\[\eqalign{{C\over A}&= {\sin^2 2\delta \over (\cos2\delta+\cos2\phi)(\cos2\delta+\cos2\phi)} ={\sin^2 2\delta \over (\cos2\delta+\cos2\phi)^2} \cr
+
+{C\over B} &= {\sin^2 2\delta \over (1-\cos2\delta)(\cos 2\delta+\cos 2\phi)} = {\sin^2 2\delta \over 2\sin^2\delta(\cos2\delta+\cos2\phi)} = {2\cos^2\delta \over \cos2\delta+\cos2\phi}.\cr} \tag{37}\label{eq:37}\]
+
+<p>Supposto che sia </p>
+
+\[ A>0\qquad\Longrightarrow\qquad  \cos2\delta + \cos2\phi > 0 \tag{38}\label{eq:38}\]
+
+<p>l'equazione \eqref{eq:35} rappresenta un'iperbole traslata in quanto sia \(C/A\) che, soprattutto, \(C/B\) sono positivi per cui, tenendo conto che abbiamo quadrato le relazioni \eqref{eq:16} e \eqref{eq:23}, la linea diurna cercata è data da un solo ramo dell'iperbole \eqref{eq:35}. <br/>
+  Le sue principali proprietà sono rappresentate dagli asintoti espressi dalle equazioni </p>
+
+\[\hbox{asintoti}\colon\quad {y_1 = +\sqrt{B\over A}\left(x + {\sin2\phi \over A}\right),\qquad
+y_2 = -\sqrt{B\over A}\left(x + {\sin2\phi \over A}\right)}\tag{39}\label{eq:39}\]
+
+<p>dal suo centro di simmetria \(C_S\)</p>
+
+\[\hbox{centro}\colon\quad C_{S}\left(-{\sin2\phi \over A},0\right) \tag{40}\label{eq:40}\]
+
+<p>e dall'eccentricità</p>
+
+\[\hbox{eccentricità}\colon\quad e=\sqrt{1+{C/B\over C/A}}=\left|\cos\phi\over\sin\delta\right|.\]
+
+<p>Inoltre, \(\gamma\) interseca l'asse \(x\) nei punti di ascissa </p>
+
+\[\hbox{intersezioni} x\colon\quad x_{1,2} = -{\sin2\phi \over A} \pm \sqrt{C\over A} \tag{41}\label{eq:41}\]
+
+<p>Le figure che seguono intendono evidenziare alcune caratteristiche delle linee diurne e la loro connessione con quelle estreme.<br/>
+   Nella figura seguente riportiamo due tracce calcolate in due giorni caratterizzati da valori opposti della declinazione (circa il 20 gennaio e 20 maggio). Evidentemente, con le scelte operate sui versi degli assi (si vedano pure le figure precedenti e la fig. <a href="#appendice01_fig5">5</a>), le linee che seguono temporalmente l'equinozio di primavera appartengono al semipiano con ascisse \(x>-(\sin 2\phi)/A\) mentre avviene il viceversa per quelle invernali. </p>
+
+
+       <figure id="appendice01_fig4">
+    <img src="./immagini/appendice01_fig04.svg" class="img-centratabordo" style="width: 60%" />
+    <figcaption>Fig. A.4.Due linee diurne con declinazioni opposte.</figcaption>
+  </figure>
+
+  <p>Nella figura <a href="#appendice01_fig5">5</a> riportiamo in visione prospettica i percorsi altazimutali del Sole nei solstizi e negli equinozi e le corrispondenti linee sul piano \(\pi\).</p>
+  
+   <figure id="appendice01_fig5">
+    <img src="./immagini/appendice01_fig05.svg" class="img-centratabordo" style="width: 70%" />
+    <figcaption>Fig. A.5.Percorsi diurni del Sole ai solstizi ed equinozi e relative linee.</figcaption>
+  </figure>
+
+  <p>Nella figura  <a href="#appendice01_fig6">6</a> tra le linee estreme dei solstizi, rappresentiamo la linea dell'equinozio e le tracce intermedie ciascuna delle quali differisce in declinazione di \(4^\circ\) dalle due contigue.
+
+
+  <figure id="appendice01_fig6">
+  <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+  <tr border="0" style="background-color: white;"><td><img src="./immagini/appendice01_fig06a.svg" class="img-centratabordo" style="width: 80%" /></td><td><img src="./immagini/appendice01_fig06b.svg" class="img-centratabordo" style="width: 80%" /></td></tr>
+</table>
+    <figcaption>Fig. A.6. Linee diurne comprese tra quelle dei solstizi.</figcaption>
+  </figure>
+
+  <p>Concludiamo risolvendo la condizione \eqref{eq:38}: la riscriviamo come 
+
+    \[\cos 2\phi>-\cos 2\delta\qquad\Longrightarrow\qquad  \cos 2\phi > \cos(2\delta+180^\circ)\tag{42}\label{eq:42}\]
+
+    <p>dalla quale, per la periodicità delle funzioni goniometriche, discende l'intervallo permesso per la latitudine \(\phi\)  </p>
+
+    \[2\delta -180^\circ < 2\phi < 180^\circ -2\delta  \qquad\Longrightarrow\qquad \delta -90^\circ < \phi < 90^\circ -\delta \tag{43}\label{eq:43}\]
+
+    <p>e poichè il valore massimo della declinazione è \(\delta=\epsilon=23.4^\circ\), la funzione \(\gamma\) data dalla \eqref{eq:35} potrà rappresentare delle iperboli solo se 
+
+      \[\epsilon-90^\circ<\phi< 90^\circ-\epsilon
+      \]
+
+      <p>ossia alle latitudini comprese tra i circoli polari. Al di là di questi limiti, per esempio alla latitudine di \(\phi=80^\circ\) sappiamo che vi sono giorni nei quali il Sole non tramonta  e, in tal caso, la sua altezza sopra l'orizzonte oscilla tra due valori (si veda la figura <a href="#fig36">36</a>). Per le latitudini polari la costante \(A\), eq. \eqref{eq:33}, è quindi negativa e di conseguenza pure il rapporto \(C/B\) dato dalla \eqref{eq:37}. ne segue che le linee diurne rappresentate dalla \(\gamma\), \eqref{eq:35}, sono ora archi di ellissi e, nei giorni in cui il Sole non tramonta, la traccia dello gnomone è un'intera ellisse (fig. <a href="#appendice01_fig7">7</a>)</p>
+
+   <figure id="appendice01_fig7">
+    <img src="./immagini/appendice01_fig07.svg" class="img-centratabordo" style="width: 70%" />
+    <figcaption>Fig. A.7. Linea diurna del Sole al solstizio e alla latitudine polare \(\phi=80^\circ\).</figcaption>
+  </figure>
+
+  <p>Infine, e solo per completezza, nel giorno del solstizio al circolo polare artico la linea (teorica!) proiettata da uno gnomone è una parabola. Difatti poiché  \(\delta=\epsilon\) e \( \phi = 90^\circ - \epsilon \) il coefficiente di \(x^2\) in \eqref{eq:30} si annulla</p>
+
+
+\[\cos2\delta + \cos2\phi = \cos2\epsilon + \cos(180^\circ - 2\epsilon) = \cos 2\delta-\cos2\delta=0\]
+
+<p>per cui la stessa si riduce alla</p>
+
+  \[
+  2x\sin2\epsilon-(1-\cos2\epsilon)y^2=-2\cos2\epsilon \qquad\Longrightarrow\qquad x=\left({1-\cos 2\epsilon \over 2\sin2\epsilon}\right)y^2-{\cos2\epsilon\over\sin2\epsilon}\qquad\Longrightarrow\qquad x=\left({\tan\epsilon\over 2}\right) y^2-\cot2\epsilon \tag{44}\label{eq:44}
+ \]
+
+ <p>che rappresenta una parabola con asse parallelo all'asse \(x\).</p>
+
+
+<h1>Le linee orarie</h1>
+
+<p>La precedente sezione ci ha permesso di riconoscere le linee giornaliere proiettate dall'estremità di uno gnomone, linee che ci indicano qual è il giorno dell'anno compreso tra le linee dei due solstizi. Non ci informano invece sull'ora del giorno cosa che invece, sulle meridiane, è evidentemente presente. Per comprendere quindi come si ottengono le linee che indicano l'ora cioè le <em>linee orarie</em>, affrontiamo il problema inverso ossia, data una certa ora del giorno, consideriamo il meridiano celeste (o cerchio orario), non necessariamente quello superiore, che passa per il Sole e il polo Nord celeste e determiniamo la curva seguita da un punto \(P\) sul piano \(\pi\) a seguito della variazione di un ipotetico Sole lungo questo stesso meridiano. In sostanza, diversamente da quanto fatto nella precedente sezione dove, per una data latitudine \(\phi\) e in un dato giorno dell'anno, si è considerata fissa la declinazione \(\delta\), in quest'altra sezione consideriamo assegnate latitudine e angolo orario mentre faremo variare la declinazione.</p>
+
+<p>Partiamo pertanto ancora dalle coordinate parametriche \eqref{eq:12} del punto \(P\), proiezione del Sole sul piano \(\pi\)</p>
+
+  \[ P\colon\cases{\eqalign{x &= {\cos\phi\sin\delta-\sin\phi\cos\delta\cos H \over \cos\phi\cos\delta\cos H + \sin\phi\sin\delta }\cr y &= {-\cos\delta\sin H\over \cos\phi\cos\delta\cos H + \sin\phi\sin\delta }\cr}}\tag{45}\label{eq:45} \]
+
+  <p>e dividiamo numeratore e denominatore di entrambe le equazioni per \(\cos\delta\)</p>
+
+  \[ P\colon\cases{\eqalign{x &= {\cos\phi\tan\delta-\sin\phi\cos H \over \cos\phi\cos H + \sin\phi\tan\delta }\cr y &= {- \sin H\over \cos\phi\cos H + \sin\phi\tan\delta }.\cr}\tag{46}\label{eq:46}} \]
+
+  <p>Poiché nel precedente sistema compare la sola funzione \(\tan\delta\) dipendente dalla declinazione (variabile) e, come nella precedente sezione, volendo determinare il legame diretto tra le coordinate \(x\) e \(y\), ricaviamo dalla seconda la funzione tangente </p>
+
+  \[\tan\delta = -{\sin H\over y \sin\phi}-{\cos H\over \tan\phi} \]
+
+  <p>e sostituiamo il risultato nella prima equazione della \eqref{eq:46}. Con alcune rielaborazioni algebriche esplicitiamo la \(y\) per giungere alla semplice espressione lineare tra \(x\) e \(y\)</p>
+
+  \[y=(\sin\phi\tan H)x-\cos\phi\tan H,\qquad\Longrightarrow\qquad y=\sin\phi\tan H(x-\cot\phi)\tag{47}\label{eq:47}\]
+
+  <p>equazione che mostra come le linee orarie siano delle semplici rette. Nella figura <a href="#appendice01_fig8">8</a> tracciamo in colore tre meridiani celesti tra cui quello locale le rispettive proiezioni su \(\pi\).</p>
+
+   <figure id="appendice01_fig8">
+    <img src="./immagini/appendice01_fig08.svg" class="img-centratabordo" style="width: 70%" />
+    <figcaption>Fig. A.8. Linee orarie di tre meridiani celesti.</figcaption>
+  </figure>
+
+<p>In effetti quanto appena ottenuto dimostra una proprietà generale della proiezione stereografica: un qualsiasi cerchio massimo sulla sfera ha per proiezione sul piano e nell'ambito di questo tipo di trasformazione di coordinate, una retta. Tracciamo pertanto un insieme di 24 meridiani celesti avente come origine il meridiano locale (che pure è un meridiano celeste) cosicché le linee orarie corrispondenti saranno associate ciascuna ad una ben precisa ora del giorno e il meridiano locale al mezzogiorno. La figura <a href="#appendice01_fig9">9</a> riporta questa scelta mentre nella successiva (fig. <a href="#appendice01_fig10">10</a>) evidenziamo il meridiano locale e il meridiano celeste che individua il punto cardinale dell'Est.</p>
+  
+ <figure id="appendice01_fig9">
+    <img src="./immagini/appendice01_fig09.svg" class="img-centratabordo" style="width: 70%" />
+    <figcaption>Fig. A.9. 24 meridiani celesti e corrispondenti linee delle ore.</figcaption>
+  </figure>
+
+   <figure id="appendice01_fig10">
+    <img src="./immagini/appendice01_fig10.svg" class="img-centratabordo" style="width: 70%" />
+    <figcaption>Fig. A.10. In evidenza il meridiano locale e quello perpendicolare celeste che individua l'Est.</figcaption>
+  </figure>
+
+  <p>Sul piano \(\pi\) le linee orarie formano un fascio proprio di rette ossia si intersecano tutte in un unico punto che risulta la proiezione del polo Nord celeste sul piano stesso (fig. <a href="#appendice01_fig11">11</a> sinistra). Le sue coordinate si ottengono ponendo nella \eqref{eq:47} \(y=0\) oppure da una semplice considerazione geometrica basata sul triangolo rettangolo evidenziato nella <a href="#appendice01_fig10">10</a>. Ne discende</p>
+
+  \[0=(\sin\phi\tan H)x-\cos\phi\tan H\qquad\Longrightarrow\qquad x={\cos\phi\over \sin\phi}=\cot\phi \tag{48}\label{eq:48}\]
+
+  <p>Inoltre gli angoli che separano una linea oraria dalla successiva non sono tra loro uguali nè, tantomeno, sono uguali all'angolo di \(15^\circ\) che separa due meridiani celesti contigui: nella tabella <a href="#tabella1">1</a> ne riportiamo i valori in funzione della latitudine \(\phi\).</p>
+  
+  <div class="centra"><strong id="tabella1">Tabella 1</strong></div>
+    <table style="width: 40%; margin-left: auto; margin-right: auto; border: 1px solid black; text-align: center">
+    <thead>
+      <tr>
+        <th>angolo meridiani</th>
+        <th>angolo proiezioni</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>\(0^\circ\)</td><td>\(0\)</td></tr>
+      <tr><td>\(15^\circ\)</td><td>\(\arctan[(2-\sqrt3)\sin\phi]\)</td></tr>
+      <tr><td>\(30^\circ\)</td><td>\(\arctan(\sin\phi/\sqrt3)\)</td></tr>
+      <tr><td>\(45^\circ\)</td><td>\(\arctan(\sin\phi)\)</td></tr>
+      <tr><td>\(60^\circ\)</td><td>\(\arctan(\sqrt3\sin\phi)\)</td></tr>
+      <tr><td>\(75^\circ\)</td><td>\(\arctan[(2+\sqrt3)\sin\phi]\)</td></tr>
+    </tbody>
+  </table>
+
+  
+  <p>Ne segue una seconda proprietà della proiezione stereografica gnomonica: essa <em>non è conforme</em> in quanto non conserva gli angoli tra linee o piani sulla sfera e rispettive proiezioni.</p>
+
+<p>Unendo le linee diurne con quelle orarie otteniamo l'immagine di destra di figura <a href="#appendice01_fig11">11</a>: in una tale rappresentazione grafica le linee diurne intersecano quelle orarie in punti che permettono di cogliere visivamente l'ora e il giorno dell'anno in cui il Sole si trova in quella particolare posizione del sistema altazimutale. </p>
+
+     <figure id="appendice01_fig11">
+    <img src="./immagini/appendice01_fig11.svg" class="img-centratabordo" style="width: 70%" />
+    <figcaption>Fig. A.11. Linee orarie.</figcaption>
+  </figure>
+
+
+  <h1>Proiezione gnomonica su piani verticali</h1>
+
+  <p>Nelle sezioni precedenti abbiamo dedotto alcune caratteristiche della proiezione gnomonica stereografica considerando un piano orizzontale \(\pi\) passante per la base dello gnomone. In questa sezione estendiamo l'analisi ad un piano verticale \(\pi_v\) tangente alla sfera nel punto di coordinate \(-1,0,0\) (dove immaginiamo posta la base dello gnomone). Il piano è dunque perpendicolare al versore \(\mathbf{i}\) e quindi alla direzione Nord mentre può essere descritto dai soli due versori \(\mathbf{j}\) e \(\mathbf{k}\). L'estremità dello gnomone è posta ancora nel centro della proiezione \(O(0,0,0)\) (fig <a href="#appendice01_fig12">12</a>).</p>
+  
+       <figure id="appendice01_fig12">
+    <img src="./immagini/appendice01_fig12.svg" class="img-centratabordo" style="width: 85%" />
+    <figcaption>Fig. A.12. Piano verticale con percorsi solari e relative proiezioni (sinistra) e principali linee diurne e orarie (destra).</figcaption>
+  </figure>
+
+  <p>Procedendo allo stesso modo di quanto fatto nelle sezioni precedenti un punto \(P\) appartenente a \(\pi_V\) è descritto dalla terna di coordinate 
+
+        \[ 
+\bbox[border:1px solid red,15px,#ffffcc]{
+    P\left(-1,{\cos\delta\sin H\over \cos\phi\sin\delta - \cos H\cos\delta\sin\phi},{\cos H\cos\delta\cos\phi+\sin\delta\sin\phi\over \cos\phi\sin\delta - \cos H\cos\delta \sin\phi }\right).}\tag{49}\label{eq:49} \]
+
+    <p>e riconducibile alla famiglia di iperboli di parametro \(\delta\) e traslate lungo l'asse verticale \(z\) di equazione</p>
+
+\[
+\bbox[border:1px solid red,15px,#ffffcc]{
+\gamma_V:{\displaystyle\left(z\,+\,{\sin 2\phi \over \cos 2\delta\,-\,\cos 2\phi}\right)^2\kern-5pt\cdot\kern-2pt\left(\cos 2\delta\,-\,\cos 2\phi\over \sin 2\delta\right)^2 }\kern-3pt -y^2\left(\cos 2\delta\,-\,\cos 2\phi \over 2\cos^2\delta\right) = 1.} \tag{50}\label{eq:50}\]
+
+<p>Nel piano verticale l'immagine proiettata del polo Nord celeste è il punto \(P_N(-1,0,\tan\phi)\) e le linee orarie, uscenti da questo sono ancora delle rette descritte dalla</p>
+
+\[z=({\cot H\sec\phi})y+\tan\phi.\tag{51}\label{eq:51}\]
+
+  <p>La linea dell'equinozio si ottiene invece ponendo \(\delta=0\) nella \eqref{eq:49} e viene riassunta dalla coppia di equazioni dove varia con \(H\) solo la prima mentre la seconda è una costante.</p>
+
+  \[\cases{y=\displaystyle{-{\tan H\over \sin\phi}}\cr z=-\cot\phi.\cr}\tag{52}\label{eq:52}\]
+
+  <p>Nella figura riportiamo le linee diurne e orarie che traducono graficamente le precedenti osservazioni.
+
+       <figure id="appendice01_fig13">
+    <img src="./immagini/appendice01_fig13.svg" class="img-centratabordo" style="width: 45%" />
+    <figcaption>Fig. A.13. Linee orarie e diurne per un piano verticale rivolto a Sud.</figcaption>
+  </figure>
+
+
+<h1>Proiezione gnomonica su piani verticali ruotati</h1>
+
+<p>Se nella precedente sezione si  è trattato il caso di una proiezione gnomonica su un piano verticale disposto perpendicolarmente alla direzione Nord-Sud, in quest'ultima sezione trattiamo il caso generale nel quale la retta normale al piano forma un angolo \(\alpha\), detto <em>declinazione</em>, con la direzione Nord. La situazione è illustrata nella figura <a href="#appendice01_fig14">14</a> dove la disposizione della parete  (e piano  verticale \(\pi_{\alpha}\)) è individuata dal versore \(\mathbf{u_\alpha}\)</p>
+
+  \[\mathbf{u_\alpha}=\cos\alpha\,\mathbf{i} + \sin\alpha\,\mathbf{j}.\tag{53}\label{eq:53}\]
+
+  <p>In quanto segue generalizziamo pertanto le <a href="#proceduraParticolare">procedure</a> già applicate in questa appendice per un piano orizzontale e verticale per cui la disposizione geometrica del  piano di proiezione \(\pi_\alpha\) è, anche in questo caso, tangente alla sfera celeste seppur ruotato di un angolo \(\alpha\) come appare nella vista zenitale di figura <a href="#appendice01_fig15">15</a>.</p>
+
+       <figure id="appendice01_fig14">
+    <img src="./immagini/appendice01_fig14.svg" class="img-centratabordo" style="width: 35%" />
+    <figcaption>Fig. A.14. Parete verticale ruotata di un angolo \(\alpha\) rispetto alla direzione Nord.</figcaption>
+  </figure>
+
+         <figure id="appendice01_fig15">
+    <img src="./immagini/appendice01_fig15.svg" class="img-centratabordo" style="width: 35%" />
+    <figcaption>Fig. A.15. Vista zenitale del piano di proiezione e suoi due versori \(\mathbf{i'}\) e \(\mathbf{j'}\).</figcaption>
+  </figure>
+    
+  <p>Con l'aiuto della figura <a href="#appendice01_fig15">15</a> osserviamo che la terna di versori con la quale potremo descrivere i punti del piano \(\pi_\alpha\) è anzitutto costituita dal </p>
+    
+    <ul><li>versore \(\mathbf{i'}=\mathbf{u_\alpha}\) perpendicolare al piano,</li>
+    <li>dal versore \(\mathbf{k'}=\mathbf{k}\) che indica lo Zenit e che rimane immutato (punta verso il lettore), mentre</li>
+  <li>il versore \(\mathbf{j'}\) si calcola con la rotazione attorno a \(\mathbf{k}\).</li></ul>
+       
+  
+  <p>Quest'ultimo è dato dal prodotto matriciale</p>
+
+  \[\mathbf{j'}=R(\alpha)\,\mathbf{j}=\begin{pmatrix} 
+    \cos\alpha & -\sin\alpha & 0 \cr 
+    \sin\alpha &  \cos\alpha & 0 \cr
+     0 & 0 & 1\cr\end{pmatrix}
+     \begin{pmatrix}0\cr 1\cr 0\cr\end{pmatrix}
+     =\begin{pmatrix}-\sin\alpha\cr \cos\alpha\cr 0\cr\end{pmatrix}.\tag{54}\label{eq:54}\]
+
+<p>essendo \(R(\alpha)\) la matrice di rotazione attorno a \(\mathbf{k}\). Un generico punto del  piano \(\pi_\alpha\) è quindi descritto in termini dei parametri reali \(u\) e \(v\) dalle tre condizioni</p>
+
+\[\eqalign{\pi_\alpha\colon\quad {(x,y,z)} &= u\,\mathbf{j'} + v\,\mathbf{k'}-\mathbf{u_\alpha},\qquad\hbox{ed esplicitamente}\cr &= (-\cos\alpha-u \sin\alpha,\ u \cos\alpha-\sin\alpha,\ v)\qquad u,v\in\mathbb{R}\cr}\tag{55}\label{eq:55}\]
+
+     <p>dove il termine \(-\mathbf{u_\alpha}\) tiene conto della traslazione dal piano passante per l'origine \(O(0,0,0)\) al punto di tangenza \(Q\) (fig. <a href="#appendice01_fig15">15</a>). Indicato con \(S(x_S,y_S,z_S)\) un qualsiasi punto del sistema altazimutale originario, l'equazione della retta per \(O\) e \(S\) è data dalla</p>
+
+     \[r_{OS}\colon\quad  {(x,y,z)}=t(x_S\,\mathbf{i}+y_S\,\mathbf{j}+z_S\,\mathbf{k})\tag{56}\label{eq:56}\]
+
+     <p>cosicché la risoluzione del sistema tra \(r_{OS}\) e \(\pi_\alpha\)</p>
+
+     \[P\colon\quad \cases{t\,x_S=-\cos\alpha-u \sin\alpha\cr t\,y_S=\ u \cos\alpha-\sin\alpha\cr t\,y_S=v.\cr}\tag{57}\label{eq:57}
+     \]
+
+     <p> fornisce il loro punto di intersezione \(P\). Risolvendolo otteniamo il parametro che ci interessa</p>
+
+     \[t=-{1\over x_S\cos\alpha+y_S\sin\alpha}\]
+
+     <p>con il quale, sostituito nella \eqref{eq:56}, determiniamo le coordinate (altazimutali) di \(P'\), immagine di \(S\) secondo la proiezione stereografica</p>
+
+     \[P\colon\quad \cases{x=-\displaystyle{x_S\over x_S\cos\alpha+y_S\sin\alpha}\cr
+    y=-\displaystyle{y_S\over x_S\cos\alpha+y_S\sin\alpha}\cr
+  z=-\displaystyle{z_S\over x_S\cos\alpha+y_S\sin\alpha}.\cr }\tag{58}\label{eq:58}\]
+
+<p>Un ultimo passaggio già applicato per dedurre, attraverso le rispettive coordinate cartesiane, le relazioni tra diversi sistemi di riferimento, ci permette di esprimere le coordinate di \(P\) nel sistema avente origine nel punto di tangenza \(Q\) di \(\pi_\alpha\) e, questa volta, formato dai versori di base \(\mathbf{i'}\), \(\mathbf{j'}\), \(\mathbf{k'}\). Ovviamente, al termine di tale cambio di coordinate, ci aspettiamo che la prima coordinata sia nulla e che la terza non subisca alcun cambiamento.<br/>
+   La relazione che porta la terna originaria alla nuova finale è composta da una rotazione di angolo \(\alpha\), \(R(\alpha)\) attorno a \(\mathbf{k}\) data dalla \eqref{eq: 1.8} (da non confondere con quella utilizzata inizialmente in questa sezione) e da una traslazione di vettore \(-\mathbf{u_\alpha}\). Il vettore iniziale espresso in termini delle coordinate iniziali  è quindi </p>
+
+\[\hbox{coordinate iniziali}\colon\quad (x,y,z)-(-\mathbf{u_\alpha})=(x,y,z)+(\cos\alpha,\sin\alpha,0)=(x+\cos\alpha, y+\sin\alpha,z)\]
+
+<p>e la sua rotazione fornisce le nuove coordinate: in forma matriciale
+
+
+\[\begin{pmatrix}x'\cr y'\cr z'\cr\end{pmatrix} = \begin{pmatrix} \cos\alpha & \sin\alpha & 0 \cr -\sin\alpha&\cos\alpha&0\cr 0&0&1\cr\end{pmatrix}\begin{pmatrix}x+\cos\alpha\cr y+\sin\alpha\cr z\cr\end{pmatrix} \tag{59}\label{eq:59}\]
+
+<p>mentre, per esteso,</p>
+
+\[P'\colon\quad \cases{x'=1+x\cos\alpha+y\sin\alpha\cr
+y'=y\cos\alpha-x\sin\alpha\cr
+z'=z\cr}\tag{60}\label{eq:60}
+\]
+
+<p>Con la sostituzione delle \eqref{eq:58} nella precedente otteniamo le coordinate di \(P'\): queste sono
+  
+  \[
+  P'\left( 0, {x_S\sin\alpha-y_S\cos\alpha\over x_S\cos\alpha+y_S\sin\alpha}, -{z_S\over x_S\cos\alpha+y_S\sin\alpha}\right)
+  \tag{61}\label{eq:61}
+  \]
+
+  <p>e come aspettato, l'ascissa risulta nulla mentre la terza è rimasta immutata. In quanto segue potremo quindi limitarci allo studio piano del punto
+
+     \[
+     \bbox[border:1px solid red,15px,#ffffcc]{
+  P'\left({x_S\sin\alpha-y_S\cos\alpha\over x_S\cos\alpha+y_S\sin\alpha}, -{z_S\over x_S\cos\alpha+y_S\sin\alpha}\right)}
+  \tag{62}\label{eq:62}
+  \]
+  
+  <p>che, poiché sono note le sue coordinate altazimutali in termini di quelle equatoriali, \eqref{eq:7}, assume la forma </p>
+
+
+\[\bbox[border:1px solid red,15px,#ffffcc]{
+  \eqalign{P'\left(
+-{\cos\alpha\cos\delta\sin H+\cos\phi\sin\alpha\sin\delta-\cos H\cos\delta\sin\alpha\sin\phi\over \cos\delta\sin H\sin\alpha-\cos\alpha\cos\phi\sin\delta+\cos H\cos\alpha\cos\delta\sin\phi},\right.\cr &\hskip-6cm\left.{\cos H\cos\delta\cos\phi+\sin\delta\sin\phi\over \cos\delta\sin H\sin\alpha-\cos\alpha\cos\phi\sin\delta+\cos H\cos\alpha\cos\delta\sin\phi }  
+\right).\cr}} \tag{63}\label{eq:63}\]
+
+<p>Per conferma, poniamo \(\alpha=0\) nelle precedenti: ne discendono correttamente le coordinate \eqref{eq:49} del piano verticale con retta normale in direzione Nord .
+  
+  <p>Deriviamo quindi le principali caratteristiche dei percorsi seguiti da \(P'\) al variare della declinazione e dell'angolo orario.<br/>
+    Per ottenere la linea degli equinozi poniamo in quest'ultima \(\delta=0\) e riscriviamo le coordinate in termini della sola \(\tan H\)</p>
+
+  \[\cases{\eqalign{y'&=-{\cos\alpha\tan H - \sin\alpha\sin\phi \over \tan H\sin\alpha + \cos\alpha\sin\phi}
+  = {\sin\alpha\sin\phi\over \tan H\sin\alpha+\cos\alpha\sin\phi}\cr z'&=-{\cos\phi\over \tan H\sin\alpha + \cos\alpha\sin\phi}}}\tag{64}\label{eq:64}\]
+
+  <p>e in tal modo, eliminando \(\tan H\) possiamo determinare il legame tra le coordinate \((y',z')\) che risulta
+
+    \[\hbox{linea degli equinozi}\colon\quad z=-(\cot\phi\sin\alpha)y-\cos\alpha\cot\phi.\tag{65}\label{eq:65}
+    \]
+
+    <p>Questa retta, nell'emisfero settentrionale,  possiede un coefficiente angolare negativo quando \(\sin\alpha>0\) cioè in corrispondenza di una declinazione della parete positiva (verso Est): viceversa esso è positivo quando è ruotata verso Ovest.</p>
+
+<p>Allo stesso modo, determiniamo le linee orarie riscrivendo la \eqref{eq:63} in termini di \(\tan\delta\)</p>
+
+ \[\eqalign{P'\left(
+-{\cos\alpha\sin H+\cos\phi\sin\alpha\tan\delta-\cos H\sin\alpha\sin\phi\over \sin H\sin\alpha-\cos\alpha\cos\phi\tan\delta+\cos H\cos\alpha\sin\phi},{\cos H\cos\phi+\tan\delta\sin\phi\over \sin H\sin\alpha-\cos\alpha\cos\phi\tan\delta+\cos H\cos\alpha\sin\phi }  
+\right)\cr}
+\]
+
+<p>e quindi eliminando la dipendenza da questa otteniamo l'equazione</p>
+
+\[\hbox{linee orarie}\colon\quad z=\sec\phi(\cos\alpha\sin\phi-\cot H\sin\alpha)+y\left[\sec\alpha(\cos\alpha\cot H+\sin\alpha\sin\phi)\right].\tag{66}\label{eq:66}
+\]
+
+<p>Questa come nei casi trattati in precedenza al variare di \(H\) rappresenta una famiglia di rette tutte passanti per il punto</p>
+
+
+\[P'_N\left(\tan\alpha,{\tan\phi\over\cos\alpha}\right)\tag{67}\label{eq:67}
+  \]
+
+  <p>punto che è la proiezione del polo Nord celeste. Nella figura <a href="#appendice01_fig16">16</a> riassumiamo tutte queste caratteristiche notando come una tale disposizione sia spesso mostrata dalle meridiane da parete.</p>
+
+           <figure id="appendice01_fig16">
+    <img src="./immagini/appendice01_fig16.svg" class="img-centratabordo" style="width: 45%" />
+    <figcaption>Fig. A.16. Linee diurne e orarie di una meridiana da parete verticale con declinazione positiva.</figcaption>
+  </figure>
+
+  
