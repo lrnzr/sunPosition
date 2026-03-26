@@ -1,7 +1,7 @@
 # Coordinate solari e posizione apparente del Sole
 
 
-Alcuni materiali didattici accessori alle pagine di [Astronomia posizionale](http://www.lorenzoroi.net/astronomia) pubblicate nel sito personale [www.lorenzoroi.net](https://www.lorenzoroi.net). 
+Alcuni materiali didattici accessori alle pagine di [Astronomia posizionale](https://www.lorenzoroi.net/astronomia) pubblicate nel sito personale [www.lorenzoroi.net](https://www.lorenzoroi.net). 
 
 ## Files
 
