@@ -116,6 +116,7 @@ def salva_csv(percorso, risultati):
 
 # Chiede se esportare i risultati in CSV e, in caso affermativo, salva il file
 def esportazione_csv():
+    print()
     resp = input("Salvare i risultati in CSV? (s/n): ").strip().lower()
     if resp in ('s', 'y'):
         fname = input("Nome file CSV (default output_coordinateSolari.csv): ").strip()
@@ -124,7 +125,7 @@ def esportazione_csv():
         salva_csv(fname, raccogli_risultati())
         print(f"Risultati salvati in: {fname}")
     else:
-        print("Programma terminato senza esportazione CSV.")          
+        print("Programma terminato senza esportazione CSV")          
 
 # ---------------------- input -------------------------------------------------------------  
 
