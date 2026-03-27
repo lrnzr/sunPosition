@@ -22,6 +22,6 @@ Per una consultazione *non interattiva* del notebook selezionare l'icona di *nbv
 
 Nel caso si intenda sperimentare online in modo interattivo con il notebook di [Jupyter](https://jupyter.org/) lanciare *Binder* e, dopo alcuni secondi necessari al caricamento dell'immagine sul server, selezionare il notebook *ipynb*.
 
-<a href="https://mybinder.org/v2/gh/lrnzr/sunPosition/master"><img src="https://static.mybinder.org/badge_logo.svg" alt="Avviare MyBinder"></a>
+<a href="https://mybinder.org/v2/gh/lrnzr/sunPosition/main"><img src="https://static.mybinder.org/badge_logo.svg" alt="Avviare MyBinder"></a>
 
 *Lorenzo Roi*
