@@ -26,7 +26,7 @@ Nel caso invece si intenda eseguire il calcolo online sia con lo script che con 
 
 <a href="https://mybinder.org/v2/gh/lrnzr/sunPosition/main?urlpath=%2Fdoc%2Ftree%2FcoordinateSolari.py"><img src="avviaScript.svg" alt="avvia Binder" title="avvia script Python"></a>
 
-selezionare una console con *New Launcher* e quindi *Other* e avviarlo con il kernel *python coordinateSolari.py*.
+e dopo aver atteso qualche istante, selezionare la console con *New Launcher* seguita da *Other* e avviarlo con il comando *python coordinateSolari.py*.
 
 Per il notebook, avviare ciascuna cella oppure selezionare da menu *Run/Run All Cells*.
 
