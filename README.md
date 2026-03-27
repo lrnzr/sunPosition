@@ -18,10 +18,10 @@ I file distribuiti qui sono:
 
 Per una consultazione *non interattiva* del notebook selezionare l'icona di *nbviewer* per avviare la visualizzazione.
 
-<a href="https://nbviewer.jupyter.org/github/lrnzr/sunposition/tree/master/"><img src="nbviewer_badge.svg" alt="consultazione notebook" title="consultazione notebook e file dati"></a></p>
+<a href="https://nbviewer.jupyter.org/github/lrnzr/sunPosition/tree/master/"><img src="nbviewer_badge.svg" alt="consultazione notebook" title="consultazione notebook e file dati"></a></p>
 
 Nel caso si intenda sperimentare online in modo interattivo con il notebook di [Jupyter](https://jupyter.org/) lanciare *Binder* e, dopo alcuni secondi necessari al caricamento dell'immagine sul server, selezionare il notebook *ipynb*.
 
-<a href="https://mybinder.org/v2/gh/lrnzr/sunposition/master"><img src="https://static.mybinder.org/badge_logo.svg" alt="Avviare MyBinder"></a>
+<a href="https://mybinder.org/v2/gh/lrnzr/sunPosition/master"><img src="https://static.mybinder.org/badge_logo.svg" alt="Avviare MyBinder"></a>
 
 *Lorenzo Roi*
