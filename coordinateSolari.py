@@ -1,8 +1,6 @@
 import math
 import datetime
 import csv
-import argparse
-import sys
 
 # Funzioni di utilità  
     
