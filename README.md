@@ -26,10 +26,10 @@ Nel caso dello script
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lrnzr/sunPosition/main?urlpath=%2Fdoc%2Ftree%2FcoordinateSolari.py) 
 
-selezionare una console selezionando *New Launcher* e quindi avviarlo con il kernel Python.
+selezionare una console selezionando *New Launcher* e quindi *Other* e avviarlo con il kernel "python coordinateSolari.py"
 
-Per il notebook, avviare ciascuna cella oppure selezionare da menu *Run all cells*.
+Per il notebook, avviare ciascuna cella oppure selezionare da menu *Run All Cells*.
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lrnzr/sunPosition/main?urlpath=%2Fdoc%2Ftree%2FcoordinateSolari.ipynb) per avviare il notebook Jupyter
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lrnzr/sunPosition/main?urlpath=%2Fdoc%2Ftree%2FcoordinateSolari.ipynb) 
 
 *Lorenzo Roi*
