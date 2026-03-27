@@ -2,6 +2,8 @@
 
 ## Un percorso di Astronomia posizionale
 
+ ![percorsi solari](fig07c7.svg)
+
 
 Riportiamo in questo repo alcuni materiali didattici che si affiancano alle pagine di [Astronomia posizionale](https://www.lorenzoroi.net/astronomia) pubblicate nel sito personale [https://www.lorenzoroi.net](https://www.lorenzoroi.net). 
 
