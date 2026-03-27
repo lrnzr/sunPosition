@@ -1,14 +1,18 @@
 # Coordinate solari e posizione apparente del Sole
 
+## Un percorso di Astronomia posizionale
 
-Alcuni materiali didattici accessori alle pagine di [Astronomia posizionale](https://www.lorenzoroi.net/astronomia) pubblicate nel sito personale [www.lorenzoroi.net](https://www.lorenzoroi.net). 
+
+Riportiamo qui alcuni materiali didattici che si affiancano alle pagine di [Astronomia posizionale](https://www.lorenzoroi.net/astronomia) pubblicate nel sito personale [https://www.lorenzoroi.net](https://www.lorenzoroi.net). 
+
+Questi materiali, costituiti da uno script Python e da un notebook Jupyter che, con commenti più precisi, contiene le medesime funzioni dello script, permettono di calcolare le principali grandezze associate alle coordinate solari sia equatoriali che altazimutali.
 
 ## Files
 
 I file distribuiti qui sono:
 
-* il notebook [coordinateSolari.ipynb](./coordinateSolari.ipynb) nel formato di [Jupyter](https://jupyter.org/) 
-* uno script Python  [coordinateSolari.py](./coordinateSolari.py).
+* lo script Python  [coordinateSolari.py](coordinateSolari.py),
+* il notebook nel formato [Jupyter](https://jupyter.org/), [coordinateSolari.ipynb](./coordinateSolari.ipynb).
 
 ## Consultazione
 
