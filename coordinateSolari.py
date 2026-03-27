@@ -122,7 +122,9 @@ def esportazione_csv():
         if not fname:
                 fname = 'output_coordinateSolari.csv'
         salva_csv(fname, raccogli_risultati())
-        print(f"Risultati salvati in: {fname}")         
+        print(f"Risultati salvati in: {fname}")
+    else:
+        print("Programma terminato senza esportazione CSV.")          
 
 # ---------------------- input -------------------------------------------------------------  
 
@@ -223,10 +225,14 @@ azimut = (azimut + 360) % 360
 
 # ---------------------- output -------------------------------------------------------------
 
+print()
+print("Calcola la principali grandezze solari e le rispettive coordinate\n")
+print("Dati di input:")
 print("latitudine (deg): ", latitudine_geo)
 print("longitudine (deg): ", longitudine_geo)
 print("data e ora: ", dt)
 print("fuso orario (h): ", tz)
+print("\nRisultati calcolati:")
 print("delta t (s): ", delta_t)
 print("Greenwich UTC: ",greenwich_utc)
 print("Giorno giuliano UTC jde (d): ", jde) 
