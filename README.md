@@ -20,10 +20,10 @@ Per una lettura *non interattiva* del notebook selezionare l'icona di *nbviewer*
 
 <a href="https://nbviewer.jupyter.org/github/lrnzr/sunPosition/tree/main/"><img src="nbviewer_badge.svg" alt="consultazione notebook" title="consultazione notebook"></a></p>
 
-Nel caso invece si intenda eseguire il calcolo online sia con lo script che con il notebook di [Jupyter](https://jupyter.org/) lanciare *Binder* con i tasti sottostanti.
+Nel caso invece si intenda eseguire il calcolo online sia con lo script che con il notebook Jupyter lanciare *Binder* con i tasti sottostanti.
 
-[![script Python](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lrnzr/sunPosition/main?urlpath=%2Fdoc%2Ftree%2FcoordinateSolari.py)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lrnzr/sunPosition/main?urlpath=%2Fdoc%2Ftree%2FcoordinateSolari.py) per avviare lo script
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lrnzr/sunPosition/main?urlpath=%2Fdoc%2Ftree%2FcoordinateSolari.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lrnzr/sunPosition/main?urlpath=%2Fdoc%2Ftree%2FcoordinateSolari.ipynb) per avviare il notebook Jupyter
 
 *Lorenzo Roi*
