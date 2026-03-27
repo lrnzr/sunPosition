@@ -1,3 +1,0 @@
-math >= 3
-datetime >= 3
-csv >= 3
