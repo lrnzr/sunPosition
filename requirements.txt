@@ -1,2 +1,2 @@
-datetime
-csv
+datetime == 3.*
+csv == 3.*
