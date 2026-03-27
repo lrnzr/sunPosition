@@ -20,11 +20,12 @@ I nomi dei file distribuiti sono:
 
 Per una lettura *non interattiva* del notebook selezionare l'icona di *nbviewer* per avviarne la visualizzazione.
 
-<a href="https://nbviewer.jupyter.org/github/lrnzr/sunPosition/tree/main/"><img src="nbviewer_badge.svg" alt="consultazione notebook" title="consultazione notebook"></a></p>
+<a href="[https://nbviewer.jupyter.org/github/lrnzr/sunPosition/tree/main/](https://mybinder.org/v2/gh/lrnzr/sunPosition/main?urlpath=%2Fdoc%2Ftree%2FcoordinateSolari.py)"><img src="nbviewer_badge.svg" alt="consultazione notebook" title="consultazione notebook"></a></p>
 
 Nel caso invece si intenda eseguire il calcolo online sia con lo script che con il notebook Jupyter lanciare *Binder* con i tasti sottostanti.
 
 Nel caso dello script
+<a href="https://mybinder.org/v2/gh/lrnzr/sunPosition/main?urlpath=%2Fdoc%2Ftree%2FcoordinateSolari.py"><img src="avviaScript.svg" alt="avvia Binder" title="avvia script Python"></a>
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lrnzr/sunPosition/main?urlpath=%2Fdoc%2Ftree%2FcoordinateSolari.py) 
 
