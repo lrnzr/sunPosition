@@ -20,7 +20,7 @@ Per una consultazione *non interattiva* del notebook selezionare l'icona di *nbv
 
 <a href="https://nbviewer.jupyter.org/github/lrnzr/sunPosition/tree/main/"><img src="nbviewer_badge.svg" alt="consultazione notebook" title="consultazione notebook"></a></p>
 
-Nel caso si intenda sperimentare online in modo interattivo con il notebook di [Jupyter](https://jupyter.org/) lanciare *Binder* e, dopo alcuni secondi necessari al caricamento dell'immagine sul server, selezionare il notebook *ipynb*.
+Nel caso si intenda sperimentare online in modo interattivo con il notebook di [Jupyter](https://jupyter.org/) lanciare *Binder* e, dopo alcuni secondi necessari al caricamento dell'immagine sul server, selezionare il notebook *coordinateSolari.ipynb*.
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lrnzr/sunPosition/main?urlpath=%2Fdoc%2Ftree%2FcoordinateSolari.ipynb)
 
