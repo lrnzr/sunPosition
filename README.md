@@ -24,15 +24,12 @@ Per una lettura *non interattiva* del notebook selezionare l'icona di *nbviewer*
 
 Nel caso invece si intenda eseguire il calcolo online sia con lo script che con il notebook Jupyter lanciare *Binder* con i tasti sottostanti.
 
-Nel caso dello script
 <a href="https://mybinder.org/v2/gh/lrnzr/sunPosition/main?urlpath=%2Fdoc%2Ftree%2FcoordinateSolari.py"><img src="avviaScript.svg" alt="avvia Binder" title="avvia script Python"></a>
-
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lrnzr/sunPosition/main?urlpath=%2Fdoc%2Ftree%2FcoordinateSolari.py) 
 
 selezionare una console con *New Launcher* e quindi *Other* e avviarlo con il kernel *python coordinateSolari.py*.
 
 Per il notebook, avviare ciascuna cella oppure selezionare da menu *Run/Run All Cells*.
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lrnzr/sunPosition/main?urlpath=%2Fdoc%2Ftree%2FcoordinateSolari.ipynb) 
+<a href="https://mybinder.org/v2/gh/lrnzr/sunPosition/main?urlpath=%2Fdoc%2Ftree%2FcoordinateSolari.ipynb"><img src="avviaNotebook.svg" alt="avvia notebook Jupyter" title="avvia notebook Jupyter"></a>
 
 *Lorenzo Roi*
