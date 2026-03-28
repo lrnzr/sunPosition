@@ -5,8 +5,8 @@ import csv
 # Funzioni di utilità  
     
 def input_utente():
-    """Raccoglie i dati dall'utente."""
-    print("Calcola la posizione solare e altri dati\n")
+    """Chiede di inserire i dati geografici e temporali."""
+    print("Calcola la principali grandezze solari e le rispettive coordinate\n")
     
     # Coordinate geografiche
     while True:
@@ -59,10 +59,6 @@ def giorno_giuliano(dt: datetime.datetime) -> float:
    
 def normalizza_angolo_deg(a: float) -> float:
     return a % 360.0
-
-def anomalia_media_da_delta_n(delta_n_2000: float) -> float:
-    M = 357.52910 + 0.9856002819986311 * delta_n_2000 - 1.168599418792319e-13*delta_n_2000**2 - 9.850778720459782e-21*delta_n_2000**3
-    return normalizza_angolo_deg(M)  
 
 # Funzioni per esportazione CSV
 def raccogli_risultati():
@@ -139,15 +135,15 @@ delta_t = 69.184
 jde = jd - tz/24.0 + delta_t / 86400.0   
 delta_n_2000  = jde - 2451545.0
 
-greenwich_utc = dt - datetime.timedelta(hours=tz) 
+greenwich_utc = dt - datetime.timedelta(hours = tz) 
     
 # Anomalia media della Terra
-anomalia_media_deg = anomalia_media_da_delta_n(delta_n_2000)
+anomalia_media_deg = normalizza_angolo_deg(357.52910 + 0.9856002819986311 * delta_n_2000 - 1.168599418792319e-13*delta_n_2000**2 - 9.850778720459782e-21*delta_n_2000**3)
 anomalia_media_rad = math.radians(anomalia_media_deg)
 
-# Longitudine media della Terra
-longitudine_media_rad = 4.895068961684362 + 0.017202791726723517 * delta_n_2000 + 3.96667e-15 * delta_n_2000**2
-longitudine_media_deg = normalizza_angolo_deg(math.degrees(longitudine_media_rad))
+# Longitudine media della Terra (normalizzata)
+longitudine_media_rad = (4.895068961684362 + 0.017202791726723517 * delta_n_2000 + 3.96667e-15 * delta_n_2000**2) % (2 * math.pi)
+longitudine_media_deg = math.degrees(longitudine_media_rad)
 
 # eccentricita
 eccentricita = 0.016708617 - 1.1509103353867213e-9 * delta_n_2000 - 9.264842088693435e-17 * delta_n_2000**2
@@ -156,8 +152,8 @@ eccentricita = 0.016708617 - 1.1509103353867213e-9 * delta_n_2000 - 9.2648420886
 eq_centro_rad = 2 * eccentricita * math.sin(anomalia_media_rad) + 5/4 * eccentricita**2 * math.sin(2 * anomalia_media_rad) + 13/12 * eccentricita**3 * math.sin(3 * anomalia_media_rad)
 
 # Longitudine eclittica del sole
-longitudine_vera_sole_rad = longitudine_media_rad + eq_centro_rad
-longitudine_vera_sole_deg = normalizza_angolo_deg(math.degrees(longitudine_vera_sole_rad))
+longitudine_vera_sole_rad = (longitudine_media_rad + eq_centro_rad) % (2 * math.pi)
+longitudine_vera_sole_deg = math.degrees(longitudine_vera_sole_rad)
 
 # Obliquità dell'eclittica
 epsilon_rad = math.radians(23.43929111111111 - 3.560346794433036e-7 * delta_n_2000 - 1.2284827472872003e-16 * delta_n_2000**2 + 1.033533670150092e-20 * delta_n_2000**3)
@@ -183,6 +179,7 @@ latitudine_geo_rad = math.radians(latitudine_geo)
 angolo_H_tramonto_rad = math.acos(math.cos(math.radians(90 + 0.8333))/(math.cos(latitudine_geo_rad) * math.cos(declinazione_rad)) - math.tan(latitudine_geo_rad) * math.tan(declinazione_rad))
 angolo_H_tramonto_deg = math.degrees(angolo_H_tramonto_rad)
 
+# durata del dì in ore
 durata_di = 2 * angolo_H_tramonto_deg / 15.0
 
 # equazione del tempo
@@ -217,8 +214,8 @@ correzione_rifrazione = (1.02/60) / math.tan(math.radians(altezza + 10.3/(altezz
 # altezza corretta considerando la rifrazione atmosferica
 altezza_corretta = altezza + correzione_rifrazione
 
-# zenit (no rifrazione)
-zenit = 90 - altezza
+# zenit 
+zenit = 90 - altezza_corretta
 
 # azimut da sud verso ovest
 azimut = math.degrees(math.atan2(math.sin(angolo_orario_locale_rad), math.cos(angolo_orario_locale_rad)*math.sin(latitudine_geo_rad) - math.tan(declinazione_rad)*math.cos(latitudine_geo_rad)))
@@ -263,4 +260,5 @@ print("altezza corretta (deg): ", altezza_corretta)
 print("zenit (deg): ", zenit)
 print("azimut (deg): ", azimut)  
 
+# Chiede se esportare i risultati in CSV e, in caso affermativo, salva il file
 esportazione_csv()
