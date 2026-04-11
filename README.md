@@ -20,7 +20,7 @@ I nomi dei file distribuiti sono:
 
 Per una lettura *non interattiva* del notebook selezionare l'icona di *nbviewer* per avviarne la visualizzazione.
 
-[![Nbviewer](.nbviewer_badge.svg)](https://nbviewer.org/github/lrnzr/sunPosition/tree/main/) 
+[![Nbviewer](./nbviewer_badge.svg)](https://nbviewer.org/github/lrnzr/sunPosition/main/) 
 
 Nel caso invece si intenda eseguire il calcolo online sia con lo script che con il notebook Jupyter lanciare *Binder* con i tasti sottostanti.
 
