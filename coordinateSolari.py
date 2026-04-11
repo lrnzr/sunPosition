@@ -28,7 +28,8 @@ def input_utente():
                 print("Errore: La longitudine deve essere tra -180 e 180 gradi.")
         except ValueError:
             print("Errore: Inserire un numero valido.")
-
+    
+    # fuso orario
     while True:
         try:
             tz = float(input("Inserire il fuso orario (in ore): "))
@@ -57,8 +58,6 @@ def giorno_giuliano(dt: datetime.datetime) -> float:
     jd = 367 * dt.year - a[1] + b[1] + dt.day + 1721013.5 + dt.hour / 24.0 + dt.minute / 1440.0 + dt.second / 86400.0
     return jd 
    
-def normalizza_angolo_deg(a: float) -> float:
-    return a % 360.0
 
 # Funzioni per esportazione CSV
 def raccogli_risultati():
@@ -95,7 +94,7 @@ def raccogli_risultati():
         ("altezza_deg", altezza),
         ("altezza_corretta_deg", altezza_corretta),
         ("zenit_deg", zenit),
-        ("azimut_deg", azimut),
+        ("azimut_deg", azimut_deg),
     ]
 
 def salva_csv(percorso, risultati):
@@ -138,11 +137,11 @@ delta_n_2000  = jde - 2451545.0
 greenwich_utc = dt - datetime.timedelta(hours = tz) 
     
 # Anomalia media della Terra
-anomalia_media_deg = normalizza_angolo_deg(357.52910 + 0.9856002819986311 * delta_n_2000 - 1.168599418792319e-13*delta_n_2000**2 - 9.850778720459782e-21*delta_n_2000**3)
+anomalia_media_deg = (357.52910 + 0.9856002819986311 * delta_n_2000 - 1.168599418792319e-13*delta_n_2000**2 - 9.850778720459782e-21*delta_n_2000**3) % 360.0
 anomalia_media_rad = math.radians(anomalia_media_deg)
 
 # Longitudine media della Terra (normalizzata)
-longitudine_media_rad = (4.895068961684362 + 0.017202791726723517 * delta_n_2000 + 3.96667e-15 * delta_n_2000**2) % (2 * math.pi)
+longitudine_media_rad = (4.8950629938800505 + 0.017202791698456926 * delta_n_2000 + 3.9666703992487734e-15 * delta_n_2000**2) % (2 * math.pi)
 longitudine_media_deg = math.degrees(longitudine_media_rad)
 
 # eccentricita
@@ -156,8 +155,8 @@ longitudine_vera_sole_rad = (longitudine_media_rad + eq_centro_rad) % (2 * math.
 longitudine_vera_sole_deg = math.degrees(longitudine_vera_sole_rad)
 
 # Obliquità dell'eclittica
-epsilon_rad = math.radians(23.43929111111111 - 3.560346794433036e-7 * delta_n_2000 - 1.2284827472872003e-16 * delta_n_2000**2 + 1.033533670150092e-20 * delta_n_2000**3)
-epsilon_deg = math.degrees(epsilon_rad)
+epsilon_deg = 23.43929111111111 - 3.560346794433036e-7 * delta_n_2000 - 1.2284827472872003e-16 * delta_n_2000**2 + 1.033533670150092e-20 * delta_n_2000**3
+epsilon_rad = math.radians(epsilon_deg)
 
 # Declinazione solare
 declinazione_rad = math.asin(math.sin(epsilon_rad) * math.sin(longitudine_vera_sole_rad))
@@ -165,14 +164,14 @@ declinazione_deg = math.degrees(declinazione_rad)
 
 # Ascensione retta
 ascensione_retta_rad = math.atan2(math.cos(epsilon_rad) * math.sin(longitudine_vera_sole_rad), math.cos(longitudine_vera_sole_rad))
-ascensione_retta_deg = normalizza_angolo_deg(math.degrees(ascensione_retta_rad))
+ascensione_retta_deg = math.degrees(ascensione_retta_rad) % 360.0
 
 # anomalia vera = M + eq_centro
-anomalia_vera_deg = math.degrees(anomalia_media_rad + eq_centro_rad)
-anomalia_vera_rad = math.radians(anomalia_vera_deg)
+anomalia_vera_rad = anomalia_media_rad + eq_centro_rad
+anomalia_vera_deg = math.degrees(anomalia_vera_rad) % 360.0
 
 # modulo del raggio vettore Sole-Terra in unità astronomiche
-raggio = (1 - eccentricita**2) / (1 + eccentricita * math.cos(anomalia_vera_rad))
+raggio = 1.000001018 * (1 - eccentricita**2) / (1 + eccentricita * math.cos(anomalia_vera_rad))
 
 # angolo orario del tramonto
 latitudine_geo_rad = math.radians(latitudine_geo)
@@ -202,7 +201,7 @@ tempo_locale_medio = ora_utc + longitudine_geo / 15.0
 tempo_solare_apparente = tempo_locale_medio + eq_tempo_min / 60.0
 
 # angolo orario locale
-angolo_orario_locale_deg = normalizza_angolo_deg((tempo_solare_apparente - 12) * 15.0 + 360.0)
+angolo_orario_locale_deg = ((tempo_solare_apparente - 12) * 15.0 + 360.0) % 360.0
 angolo_orario_locale_rad = math.radians(angolo_orario_locale_deg)
 
 # altezza senza la rifrazione atmosferica
@@ -218,8 +217,8 @@ altezza_corretta = altezza + correzione_rifrazione
 zenit = 90 - altezza_corretta
 
 # azimut da sud verso ovest
-azimut = math.degrees(math.atan2(math.sin(angolo_orario_locale_rad), math.cos(angolo_orario_locale_rad)*math.sin(latitudine_geo_rad) - math.tan(declinazione_rad)*math.cos(latitudine_geo_rad)))
-azimut = (azimut + 360) % 360
+azimut_rad = math.atan2(math.sin(angolo_orario_locale_rad), math.cos(angolo_orario_locale_rad)*math.sin(latitudine_geo_rad) - math.tan(declinazione_rad)*math.cos(latitudine_geo_rad))
+azimut_deg = (math.degrees(azimut_rad) + 360) % 360
 
 # ---------------------- output -------------------------------------------------------------
 
@@ -258,7 +257,7 @@ print("angolo orario locale (deg): ", angolo_orario_locale_deg)
 print("altezza (deg): ", altezza)
 print("altezza corretta (deg): ", altezza_corretta) 
 print("zenit (deg): ", zenit)
-print("azimut (deg): ", azimut)  
+print("azimut (deg): ", azimut_deg)  
 
 # Chiede se esportare i risultati in CSV e, in caso affermativo, salva il file
 esportazione_csv()
