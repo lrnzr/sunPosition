@@ -26,12 +26,12 @@ Nel caso invece si intenda eseguire il calcolo online sia con lo script che con 
 
 Nel caso dello script
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lrnzr/sunPosition/main?urlpath=%2Fdoc%2Ftree%2FcoordinateSolari.py) 
+[![Binder](./binderLogo.svg)](https://mybinder.org/v2/gh/lrnzr/sunPosition/main?urlpath=%2Fdoc%2Ftree%2FcoordinateSolari.py) 
 
 selezionare una console con *New Launcher* e quindi *Other* (oppure, da menu, *File/New/Terminal*) e avviarlo con il kernel *python coordinateSolari.py*.
 
 Per il notebook, avviare ciascuna cella oppure selezionare da menu *Run/Run All Cells*.
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lrnzr/sunPosition/main?urlpath=%2Fdoc%2Ftree%2FcoordinateSolari.ipynb) 
+[![Binder](./binderLogo.svg)](https://mybinder.org/v2/gh/lrnzr/sunPosition/main?urlpath=%2Fdoc%2Ftree%2FcoordinateSolari.ipynb) 
 
 *[Lorenzo Roi](mailto:LRoi@mclink.it)*
