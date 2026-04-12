@@ -28,9 +28,9 @@ Nel caso dello script
 
 [![Binder](./binderLogo.svg)](https://mybinder.org/v2/gh/lrnzr/sunPosition/main?urlpath=%2Fdoc%2Ftree%2FcoordinateSolari.py) 
 
-selezionare una console con *New Launcher* e quindi *Other* (oppure, da menu, *File/New/Terminal*) e avviarlo con il kernel *python coordinateSolari.py*.
+selezionare una console con *`New Launcher`* e quindi *`Other`* (oppure, da menu, *`File/New/Terminal`*) e avviarlo con il kernel *`python coordinateSolari.py`*.
 
-Per il notebook, avviare ciascuna cella oppure selezionare da menu *Run/Run All Cells*.
+Per il notebook, avviare ciascuna cella oppure selezionare da menu *`Run/Run All Cells`*.
 
 [![Binder](./binderLogo.svg)](https://mybinder.org/v2/gh/lrnzr/sunPosition/main?urlpath=%2Fdoc%2Ftree%2FcoordinateSolari.ipynb) 
 
