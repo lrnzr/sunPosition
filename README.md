@@ -18,7 +18,7 @@ I nomi dei file distribuiti sono:
 
 ## Consultazione
 
-Per una lettura *non interattiva* del notebook selezionare l'icona di *nbviewer* per avviarne la visualizzazione oppure direttamente in GitHub con il link [GitHub](https://github.com/lrnzr/sunPosition/blob/main/coordinateSolari.ipynb).
+Per una lettura *non interattiva* del notebook selezionare l'icona di *nbviewer* per avviarne la visualizzazione oppure direttamente in GitHub con il link locale [GitHub](https://github.com/lrnzr/sunPosition/blob/main/coordinateSolari.ipynb).
 
 [![Nbviewer](./nbviewer.svg)](https://nbviewer.org/github/lrnzr/sunPosition/blob/main/coordinateSolari.ipynb)
 
